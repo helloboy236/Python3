@@ -4,7 +4,10 @@
   flex-direction: column;
   align-items: center;
 }
-
+.share_xcxm_v{
+  display: flex;
+  justify-content: center;
+}
 
 .userinfo-avatar {
   width: 128rpx;
@@ -12,9 +15,47 @@
   margin: 20rpx;
   border-radius: 50%;
 }
+.guard{
+  width:80rpx;
+  height: 80rpx;
+  margin-top:60rpx;
+}
+
+.d_image{
+  width: 600rpx;
+  height: 600rpx;
+}
+.d_box {
+position:fixed;
+overflow: hidden;
+top: 20%;
+margin-left: 50rpx;
+z-index: 1;
+background: #FAFAFA;
+display: flex;
+border-radius: 100px;
+}
+.d_box2 {
+position:fixed;
+overflow: hidden;
+top: 20%;
+margin-left: 150rpx;
+z-index: 1;
+background: rgb(223, 221, 143);
+display: flex;
+}
+.d_box3 {
+position:fixed;
+overflow: hidden;
+top: 20%;
+z-index: 1;
+background: rgb(223, 221, 143);
+width: 100vw;
+height: 600rpx;
+}
 
 .userinfo-nickname {
-  color: #aaa;
+  color: rgb(32, 214, 16);
 }
 
 .usermotto {
@@ -28,6 +69,10 @@
 
 .reset{
   background: red;
+}
+
+.name_color{
+  color: blue;
 }
 
 .menu_view{
@@ -46,7 +91,7 @@
   background-color: red;
 }
 .menu_1{
-  background: burlywood;
+  background: rgb(245, 163, 56);
   height: 60rpx;
   font-size: 28rpx;
   margin-top:10rpx; 

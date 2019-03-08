@@ -32,20 +32,14 @@ Page({
       title: 'Python3',
     })
     var that = this
-    wx.getUserInfo({
-      success: function (res) {
-        that.setData({
-          disabled: false
-        })
-      },
-      fail: function () {
+      if(app.globalData.userInfo==undefined){
         wx.showModal({
           title: '温馨提示',
           content: '登录后即可使用全部功能',
           showCancel: true,
-          cancelText: '就不去',
+          cancelText: '先逛逛',
           cancelColor: 'red',
-          confirmText: '好',
+          confirmText: '去登录',
           confirmColor: 'green',
           success: function (res) {
             if (res.confirm)
@@ -54,8 +48,11 @@ Page({
               })
           },
         })
+      }else{
+        that.setData({
+          disabled: false
+        })
       }
-    })
   },
 
   /**

@@ -9,13 +9,19 @@ Page({
   /**
    * 页面的初始数据
    */
+ 
   data: {
     movable_hidden:true,
     amount_base:0,
     amount:0,
     input_x:0,
     input_y:0,
-    tip:'我也发一个',
+    tip:'发一条',
+    first_x:0,
+    first_y:0,
+    reveal_x:300,
+    reveal_y:0,
+    next_x: 0,
     s_hidden: true,
     message:'     1、此处准许你畅所欲言，想说什么说什么，不开心什么的尽管发泄在此，这里就是无人问津树洞，没人知道你是谁，完全匿名。\n 2、无论你是程序遇到接二连三的bug，无处发泄，还是生活上遇到什么困难，都可以在这里尽情地发泄你的情绪，我们都是你的倾听者！！！\n3、你也可以在这里发表你的编程思想或者工作时的大概情况，让目前没有从业的人员参考一下。\n4、你可以分享你的编程经验，或者编程小知识。\n5、甚至可以发送你的个性签名，人生格言。\n6、可能我不足够优秀，得不到你的芳心，但我会不断努力，改善之路希望有你的建议和参与。树洞由我们一起发扬光大，加油，程序猿们。\n print("Good luck(^_^)")&nbsp;&nbsp;#祝你编程之路顺利',
       title:'陌生人，你好，关于该页面，我有话说',
@@ -33,6 +39,9 @@ Page({
   onLoad: function (options) {
     var that = this
     that.refresh()
+    this.setData({
+      next_x:app.globalData.screen_width-80
+    })
   },
 
   /**
@@ -47,10 +56,14 @@ Page({
    */
   onShow: function () {
     var that=this
-    if (app.globalData.userInfo.nickName != undefined)
+    if (app.globalData.userInfo.nickName == undefined)
     {
       that.setData({
         movable_hidden:false,
+        first_x:app.globalData.screen_width/2-36,
+        first_y:app.globalData.screen_height-200,
+        reveal_x: app.globalData.screen_width / 2 - 42,
+        reveal_y: app.globalData.screen_height - 260
       })
     } else {
       wx.showModal({
@@ -135,7 +148,7 @@ Page({
         for (let i = 0; i < batchTimes; i++) {
           if (i == 0)
           {
-              todos.orderBy('date', 'asc').orderBy('time','asc').get({
+              todos.orderBy('data','desc').get({
               success(res) {
                   const result = res.data
                 for (let j = 0; j < result.length; j++)
@@ -150,10 +163,10 @@ Page({
             }
           else
           {
-            todos.orderBy('date', 'asc').orderBy('time', 'asc').skip(i * 20).limit(20).get({
+            todos.orderBy('data','desc').skip(i * 20).limit(20).get({
               success(res) {
                 const result = res.data
-                for (let j = 0; j < result.length; j++)
+                for (let j = 0; j <result.length; j++)
                   array_data.push(result[j])
               },
               complete() {
@@ -274,7 +287,7 @@ Page({
       
   },
   send_one:function(){
-    if (this.data.tip =='我也发一个')
+    if (this.data.tip =='发一条')
       this.setData({
        tip:'算了',
        s_hidden:false,
@@ -283,7 +296,7 @@ Page({
       })
     else
       this.setData({
-        tip: '我也发一个',
+        tip: '发一条',
         s_hidden: true,
         input_x: 0,
         input_y: 0
@@ -311,7 +324,7 @@ Page({
             that.setData({
               message_input: '',
               nickname_input: '',
-              tip: '我也发一个',
+              tip: '发一个',
               s_hidden: true,
               mask: true
             })
@@ -344,7 +357,7 @@ Page({
             that.setData({
               message_input:'',
               nickname_input:'',
-              tip: '我也发一个',
+              tip: '发一条',
               s_hidden: true
             })
           }

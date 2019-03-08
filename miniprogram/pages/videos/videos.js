@@ -49,7 +49,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.globalData.userInfo.nickName='乐逍遥'
+    //app.globalData.userInfo.nickName='乐逍遥'
     wx.setNavigationBarTitle({
       title:'看视频('+this.data.chapter_current+'/8)学Python'
     })
@@ -81,7 +81,7 @@ Page({
         showCancel: true,
         cancelText: '就不去',
         cancelColor: 'red',
-        confirmText: '好',
+        confirmText: '马上去',
         confirmColor: 'green',
         success: function(res) {
           if(res.confirm)
@@ -206,7 +206,7 @@ Page({
     }
   },
   play_occur:function(){
-    wx.hideLoading()
+    
   },
   pause_occur:function(){
 
@@ -215,11 +215,11 @@ Page({
     var that=this
     wx.showModal({
       title: '提示',
-      content: '是否播放下一章视频',
+      content: '是否播放下一章视频？？？',
       showCancel: true,
-      cancelText: '就不',
+      cancelText: '再看一遍',
       cancelColor: 'red',
-      confirmText: '好的',
+      confirmText: '下章走起',
       confirmColor: 'green',
       success: function(res) {
         if(res.confirm)
@@ -231,12 +231,10 @@ Page({
   },
   video_error:function(e){
     this.setData({
-      video_title:'视频错误消息'+e.detail.error
+      video_title:'视频错误消息'+e.detail.error+'  下拉刷新'
     })
   },
-  video_wating:function(){
-    wx.showLoading({
-      title: '努力缓冲中',
-    })
+  video_wating:function(e){
+    
   }
 })

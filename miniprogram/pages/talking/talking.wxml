@@ -6,11 +6,15 @@
     <scroll-view scroll-y>
       <view  class='content'><text decode='ture'>{{message}}</text></view>
     </scroll-view>
-    <movable-view class='movable_previous' x="0" y="360" direction="all" out-of-bounds='ture' inertia='ture' hidden='{{movable_hidden}}' friction='2' bindtap='previous_item'>上一条     </movable-view>
+    <movable-view class='movable_previous' x="0" y="360" direction="vertical" out-of-bounds='ture' inertia='ture' hidden='{{movable_hidden}}' friction='2' bindtap='previous_item'><button class='movable_previous.button'>上一条</button></movable-view>
     <movable-view class='movable_previous' hidden="{{delete_hidden}}" x="0" y="400" bindtap='delete_item'>删除</movable-view>
-    <movable-view class='movable_reveal' out-of-bounds='ture' inertia='ture' friction='5' x="95" y="400" direction="vertical" bindtap='send_one'>{{tip}}</movable-view>
-    <movable-view class='movable_refresh' out-of-bounds='ture' inertia='ture' friction='2' x="130" y="360" direction="vertical" bindtap='return_home'>回到首页</movable-view>
-    <movable-view class='movable_next' x="250" y="360" direction="all" out-of-bounds='ture' hidden='{{movable_hidden}}' inertia='ture' friction='2' bindtap='next_item' animation="ture">下一条</movable-view>
+    <movable-view class='movable_reveal' out-of-bounds='ture' inertia='ture' friction='5' x="{{reveal_x}}" y="{{reveal_y}}" direction="all" bindtap='send_one'><button class='movable_reveal.button'>{{tip}}</button></movable-view>
+    <movable-view class='movable_refresh' direction='all' out-of-bounds='ture' inertia='ture' friction='1' x="{{first_x}}" y="{{first_y}}" bindtap='return_home'>
+    <button style='height:50rpx;width:50rpx;'></button>
+    <button class='movable_refresh.button' plain='true'>首页</button>
+    <button style='height:50rpx;width:50rpx;'></button>
+    </movable-view>
+    <movable-view class='movable_next' x="{{next_x}}" y="360" direction="all" out-of-bounds='ture' hidden='{{movable_hidden}}' inertia='ture' friction='2' bindtap='next_item' animation="ture"><button class='movable_next.button'>下一条</button></movable-view>
     <movable-view class='info' direction="vertical" friction='2' x="{{input_x}}" y="{{input_y}}" hidden='{{s_hidden}}'>
           <view style='height:50rpx;'>拖动此处上下移动</view>
         <form>
