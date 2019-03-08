@@ -1,0 +1,89 @@
+<!--miniprogram/pages/first/chapters/c4/c4.wxml-->
+<view class='show'>
+<rich-text type='text'>
+<p>
+Python 中的变量不需要声明。每个变量在使用前都必须赋值，变量赋值以后该变量才会被创建。</p>
+<text>\r\n</text>
+<p>在 Python 中，变量就是变量，它没有类型，我们所说的"类型"是变量所指的内存中对象的类型。</p>
+<p>用等号‘=‘来给变量赋值。</p><p>
+等号左边是一个变量名,等号右边是存储在变量中的值。而且Python允许同时为多个变量赋值</p>
+<text>
+\r\n Python3 有六个标准数据类型：
+其中不可变数据（3 个）：
+Number（数字）、String（字符串）、Tuple（元组）；
+可变数据（3 个）：
+     List（列表）、Dictionary（字典）、Set（集合）。</text>
+</rich-text>
+<view class='showFun'>
+  <text space='true' decode='true'>>>> a=6&nbsp;&nbsp;# 单变量赋值
+    >>> name='xiaoming'
+    >>> a=b=c=2 &nbsp;&nbsp;# 多变量赋值
+    >>> print(a)
+2
+>>> print(type(a))&nbsp;&nbsp;type()函数是求一个变量的类型的，然后print打印出来，比较常用
+&lt;class 'int'&gt;    # int为整形
+>>>print(name)
+xiaoming
+>>> print(type(name))
+&lt;class 'str'&gt;   # str为字符串
+  </text>
+</view>
+<text>
+另外使用del var可以删除变量var,释放内存
+
+Number:
+Python3 支持 int、float、bool(True or False、complex（复数）。
+
+String:
+Python中的字符串用单引号'或者双引号"左右包围起来，如果字符串内存在反斜杠\，则需要考虑到\是转义字符，如果要求存在反斜杠有两种方法，即①使用两个反斜杠\\转义出一个反斜杠，或者在字符串第一个引号的前面加个小写字母r，此时引号内将不存在任何转义字符，引号内看到的是什么，变量中存储的就是什么。
+
+Tuple:
+Tuple(元组），元组与下面要介绍的列表的区别在于，元组一旦定义就不可改变，但是列表可以。
+元组是用圆括号进行定义的，多个元素用逗号分隔开。
+</text>
+<view class='showFun'>
+  <text> >>>tuple1 = (2019,'猪年大吉')
+  </text>
+</view>
+<text>
+List:
+List（列表）是 Python 中使用最频繁的数据类型。
+列表可以完成大多数集合类的数据结构实现。列表中元素的类型可以不相同，它支持数字，字符串甚至可以包含列表（所谓嵌套）。
+列表是写在方括号 [] 之间、用逗号分隔开的元素列表。
+如下图所示，这就定义了一个具有两个元素的列表list1
+</text>
+<view class='showFun'>
+  <text> >>>list1 = [2019,'猪年大吉']
+  </text>
+</view>
+<text>
+Dictionary:
+字典（dictionary）是Python中另一个非常有用的内置数据类型。
+列表是有序的对象集合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。
+字典用大括号 { } 标识，它是一个无序的 键(key) : 值(value) 的集合。
+键(key)必须使用不可变类型。
+在同一个字典中，键(key)必须是唯一的。
+</text>
+<view class='showFun'>
+  <text>dict1 = {'name': 'xiaowu','年龄':21}
+  </text>
+</view>
+<text>
+Set:
+集合（set）是由一个或数个形态各异的大小整体组成的，构成集合的事物或对象称作元素或是成员。
+基本功能是进行成员关系测试和删除重复元素。
+可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。
+<!--示例代码区-->
+</text>
+<view class='showFun'>
+  <text>student = {'Tom', 'Jim', 'Mary', 'Tom', 'Jack', 'Rose'}
+  </text>
+</view>
+<rich-text nodes="{{html}}"></rich-text>
+<text>
+好，本章到此结束。
+温馨提示：Python中所有符号均为英文状态下的！！！
+
+</text>
+<button class='btnreturn' bindtap='returnMain'>返回主目录</button>
+</view>

@@ -1,0 +1,78 @@
+// miniprogram/pages/first/chapters/c4/c4.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    html1:'<h1>Python 运算符</h1>\
+    <hr/><hr/>\
+    <p>假设a=10，b=9</p>\
+    <hr/><hr/>',
+    xiaoyu:'<',
+    xy:'a<b输出False',
+    exam:'>=、<=、==、！=与上述类似'
+  },  
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: 'Python 运算符',
+    })
+    },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  returnMain: function () {
+    wx.navigateBack({
+    })
+  }
+})

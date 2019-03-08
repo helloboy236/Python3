@@ -1,0 +1,37 @@
+/* miniprogram/pages/videos/videos.wxss */
+.video_title{
+  text-align: center;
+  size: 30rpx;
+  width: 100vw;
+}
+.movable_area{
+  width: 100vw;
+  height: 60vh;
+}
+
+.video_view{
+  width: 100vw;
+}
+
+.cutoff_line{
+  height: 10rpx;
+  width: 100vw;
+  background: black;
+}
+
+.control_play{ 
+  width: 100rpx;
+  height: 30px;
+  text-align: left;
+}
+
+.myflex{
+  display: flex;
+}
+.myflex_height{
+  height: 30rpx;
+}
+
+.send_danmu{
+  background: green;
+}

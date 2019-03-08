@@ -1,0 +1,27 @@
+<!--miniprogram/pages/talking/talking.wxml-->
+<view class='v1' style='background:url("https://612d-a-1-b4b138-1258455603.tcb.qcloud.la/image/tree.jpg?sign=e35dc74537a43052142f8cf68734a681&t=1551791826")'>
+  <view class='cut_off_line'></view>
+  <movable-area style="height: 100vh; width: 100vw;">
+      <label class='title'>{{title}}:</label>
+    <scroll-view scroll-y>
+      <view  class='content'><text decode='ture'>{{message}}</text></view>
+    </scroll-view>
+    <movable-view class='movable_previous' x="0" y="360" direction="all" out-of-bounds='ture' inertia='ture' hidden='{{movable_hidden}}' friction='2' bindtap='previous_item'>上一条     </movable-view>
+    <movable-view class='movable_previous' hidden="{{delete_hidden}}" x="0" y="400" bindtap='delete_item'>删除</movable-view>
+    <movable-view class='movable_reveal' out-of-bounds='ture' inertia='ture' friction='5' x="95" y="400" direction="vertical" bindtap='send_one'>{{tip}}</movable-view>
+    <movable-view class='movable_refresh' out-of-bounds='ture' inertia='ture' friction='2' x="130" y="360" direction="vertical" bindtap='return_home'>回到首页</movable-view>
+    <movable-view class='movable_next' x="250" y="360" direction="all" out-of-bounds='ture' hidden='{{movable_hidden}}' inertia='ture' friction='2' bindtap='next_item' animation="ture">下一条</movable-view>
+    <movable-view class='info' direction="vertical" friction='2' x="{{input_x}}" y="{{input_y}}" hidden='{{s_hidden}}'>
+          <view style='height:50rpx;'>拖动此处上下移动</view>
+        <form>
+          <input value='{{nickname_input}}' confirm-type='done' bindinput='bi_name' placeholder='输入昵称或者标题' placeholder-style='color:black;' maxlength='20' class='input_s'></input>
+          <view style='height:30rpx;'></view>
+          <textarea class='input_s' style="height:80rpx;" value='{{message_input}}' confirm-type='done' bindinput='bi_message' placeholder='输入小秘密或者其他(最多2000字)' maxlength='2000' placeholder-style='color:black;height:100rpx'></textarea>
+          
+          <view style='height:30rpx;'></view>
+          <button hover-class='hover1' style='color:#FE9A2E;' bindtap='send'>投入树洞</button>
+        </form>
+    </movable-view>
+    <view style='margin-top:100rpx;text-align:center;'>tip:你可以把按钮拖动到这里 </view>
+  </movable-area>
+</view>

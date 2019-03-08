@@ -1,0 +1,34 @@
+<!--miniprogram/pages/first/chapters/c3/c3.wxml-->
+<view class='show'>
+<text>
+首先打开你的电脑，在桌面上按组合键Win+R打开运行，输入cmd，回车，再输入Python，进入Python程序编写界面
+<!--示例代码区-->
+</text>
+<view class='showFun'>
+  <text>
+    C:\Users\Administrator>python
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 17:00:18) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+  </text>
+</view>
+<text>
+其中>>>为命令提示符，提示你输入命令，一切语言从‘Hello world!!!’开始，所以我们也是遵循传统吧
+在>>>后面输入print("Hello world!!!")，然后敲回车，效果应该如图所示，print是Python内置的打印输出函数，即在电脑上显示传入的字符串的值，是不是特别简单呢！！！
+<!--示例代码区-->
+</text>
+<view class='showFun'>
+  <text>
+    C:\Users\Administrator>python
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 17:00:18) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("Hello world!!!")
+Hello world!!!
+>>>
+  </text>
+</view>
+<text>
+至此，你的第一句Python代码已经学习完了，是不是很简单，简单的话那就坚持学下去吧，Python的迷雾等着你慢慢揭开。加油(…^_^…)
+</text>
+<button class='btnreturn' bindtap='returnMain'>返回主目录</button>
+</view>

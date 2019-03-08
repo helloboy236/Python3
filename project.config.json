@@ -1,0 +1,120 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wxe85e61ceb3de408b",
+	"projectname": "basicPython",
+	"libVersion": "2.2.5",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 12,
+			"list": [
+				{
+					"id": 0,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "c2",
+					"pathName": "pages/first/chapters/c2/c2",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "pages/mine/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "c3",
+					"pathName": "pages/first/chapters/c3/c3",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "first",
+					"pathName": "pages/first/first",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "c4",
+					"pathName": "pages/first/chapters/c4/c4",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "c5",
+					"pathName": "pages/first/chapters/c5/c5",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "c6",
+					"pathName": "pages/first/chapters/c6/c6",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "c7",
+					"pathName": "pages/first/chapters/c7/c7",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "c8",
+					"pathName": "pages/first/chapters/c8/c8",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "c9",
+					"pathName": "pages/first/chapters/c9/c9",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "talk",
+					"pathName": "pages/talking/talking",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "videos",
+					"pathName": "pages/videos/videos",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

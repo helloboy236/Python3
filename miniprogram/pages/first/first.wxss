@@ -1,0 +1,31 @@
+/* pages/first/first.wxss */
+.python{
+  display: flex;
+  justify-content: center;
+  height: 150rpx;
+  align-content: center;
+  width: 100vw;
+}
+
+.f1{
+  background: burlywood;
+}  
+
+.btn_select{
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  margin: 10rpx;
+  font-size: 30rpx;
+  height: 60rpx;
+  background: rgb(222, 135, 135);
+  align-items: flex-start;
+  align-self: flex-start;
+}
+
+.btn_hover{
+  background: #F3F781
+}
+
+.btn_fenge{
+  font-size: 28rpx;
+}

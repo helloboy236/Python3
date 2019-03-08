@@ -1,0 +1,25 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.show{
+  background: #F7BE81;
+  margin: 10rpx;
+}
+.showFun{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  background: black;
+  color: #00FF00;
+}
+.showLink{
+  font-size: 28rpx;
+  color: #0000FF;
+  background: #FBFBEF;
+}
+.btnreturn{
+  background:#00FF00; 
+}

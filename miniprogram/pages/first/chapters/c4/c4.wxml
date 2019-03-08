@@ -1,0 +1,89 @@
+<!--miniprogram/pages/first/chapters/c4/c4.wxml-->
+<view class='show'>
+<text>
+编码:
+默认情况下，Python 3 源码文件以 UTF-8 编码，所有字符串都是 unicode 字符串。一般不做修改。
+
+标识符(即名字一类的东西)：
+一般来讲，名字是可以随便取的，但是要遵循一定的规范：
+① 标识符的第一个字符只能是字母或者下划线’_'，一定不能是数字开头，学过C的应该知道
+② 标识符的其他部分由 字母、数字或者下划线 组成
+③ Python标识符区分大小写，即变量A 和 a是两个不同的变量
+
+Python保留字：
+保留字不能被用作标识符，哪些是保留字呢我们可以在Python编辑器下输入以下命令进行查看，有个大致印象就好
+</text>
+<view class='showFun'>
+  <text>
+    C:\Users\Administrator>python
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 17:00:18) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import keyword
+>>> keyword.kwlist
+['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+>>>
+  </text>
+</view>
+<text>
+其中 import 的功能是导入使用到的库，keyword是Python提供的一个标准库，在下面将会介绍到import。
+
+注释：
+每个程序都需要注释， 注释可以让别人更好的理解代码，也能让自己调试更加方便，所以养成一个写注释的好习惯
+Python的单行注释是 ‘#’ ，处于 ‘#‘ 后面的字符串，Python不会去管它，’#’ 可以放在行的开头，也可以放在代码的结束
+Python的多行注释，可以用 ‘#’ 注释多行，每一行都含有一个 ‘#’；也可以用三个引号作为多行注释的开始和结束如 '''这里是多行代码注释'''
+
+行与缩进：
+Python代码，一般一行为一句；当在一行中写多条语句时，用’；‘隔开
+Python最具特色的就是使用缩进代表代码块，需要用{}，这样就使代码看起来更清晰简便，缩进为四个空格，也可以直接点击键盘左手边的’Tab‘键进行缩进，这样更加方便。同时'Tab’键在Pycharm软件中还有补齐代码的功能，比如当你想输入import保留字的时候，输入'imp'然后敲‘Tab’键将会自动补齐为import;缩进时还要注意同一个代码块缩进的空格数应该相同！不然会报错。以下给出例子：
+</text>
+<view class='showFun'>
+  <text decode='true'># 这是正确使用缩进的示例
+>>> if True:
+... &nbsp;&nbsp;&nbsp;&nbsp;print('正确')
+... &nbsp;&nbsp;&nbsp;&nbsp;print('正确')
+... else:
+... &nbsp;&nbsp;&nbsp;&nbsp;print('错误')
+... &nbsp;&nbsp;&nbsp;&nbsp;print('错误')
+...
+正确
+正确
+>>>
+  </text>
+</view>
+
+
+<view class='showFun'>
+  <text decode='true'># 这是错误使用缩进的示例
+if True:
+... &nbsp;&nbsp;&nbsp;&nbsp;print('正确')
+... &nbsp;&nbsp;&nbsp;&nbsp;print('正确')
+... else:
+... &nbsp;&nbsp;&nbsp;&nbsp;print('错误')
+... &nbsp;&nbsp;print('错误')
+  File "&lt;stdin&gt;", line 6
+    print('错误')
+               ^
+IndentationError: unindent does not match any outer indentation level
+>>>
+  </text>
+</view>
+
+<text>
+其中 if...else...是条件控制语句，以后有章节会专门介绍。
+
+import和from...import...:
+在Python中用import和from...import来导入相应的模块，区别在于，import用于导入整个模块，from...import...用于导入模块中的某个函数
+</text>
+<view class='showFun'>
+  <text decode='true'>
+    >>>import sys&nbsp;&nbsp;&nbsp ;&nbsp;# 导入整个sys模块
+    >>>from sys import path&nbsp;&nbsp;&nbsp;&nbsp;# 从sys模块导入函数path，当导入多个函数时，中间用’，‘隔开
+    >>>from sys import *&nbsp;&nbsp;&nbsp;&nbsp;# 导入sys模块的所有函数 
+  </text>
+</view>
+<text>
+好了，本章就到这里，感觉不错还可以接受的话，请继续加油吧。
+
+</text>
+<button class='btnreturn' bindtap='returnMain'>返回主目录</button>
+</view>

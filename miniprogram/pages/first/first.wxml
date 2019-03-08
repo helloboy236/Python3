@@ -1,0 +1,16 @@
+<!--pages/first/first.wxml-->
+<image class='python' src="images/python.png"></image>
+
+<scroll-view class='f1'>
+<button class='btn_select' hover-class='btn_hover' bindtap='chapter1' disabled='{{disabled}}'>1、初识Python\r\n</button>
+<button class='btn_select' hover-class='btn_hover' bindtap='chapter2' disabled='{{disabled}}'>2、搭建Python开发环境\r\n</button>
+<button class='btn_select' hover-class='btn_hover' bindtap='chapter3' disabled='{{disabled}}'>3、我的第一句Python程序</button>
+<button class='btn_select' hover-class='btn_hover' bindtap='chapter4' disabled='{{disabled}}'>4、Python的编程规范</button>
+<button class='btn_select' hover-class='btn_hover' bindtap='chapter5' disabled='{{disabled}}'>5、Python的基本数据类型</button>
+<button class='btn_select' hover-class='btn _hover' bindtap='chapter6' disabled='{{disabled}}'>6、Python 中的运算符</button>
+<button class='btn_select' hover-class='btn_hover' bindtap='chapter7' disabled='{{disabled}}'>7、Python 常用数据类型的处理</button>
+<button class='btn_select' hover-class='btn_hover' bindtap='chapter8' disabled='{{disabled}}'>8、if...elif...else条件控制</button>
+<button class='btn_select' hover-class='btn_hover' bindtap='chapter9' disabled='{{disabled}}'>9、for、while循环语句</button>
+<button class='btn_fenge' bindtap='chapter10' disabled='{{disabled}}'>现在你可以结合所学自己去写一些小的程序练练手了</button>
+<button class='btn_select' loading='true' hover-class='btn_hover' bindtap='chapter19' disabled='{{disabled}}'>......</button>
+</scroll-view>

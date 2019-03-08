@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+<label>{{logmes}}</label>
+  <view class="userinfo">
+    <button class='login' wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 一键登录 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfor.avatarUrl}}" ></image>
+      <text class="userinfo-nickname">{{userInfor.nickName}}</text>
+    </block>
+  </view>
+</view>
+<view class='menu_view'>
+  <button class='menu' bindtap='test'>2019</button>
+  <button class='menu' hidden='{{hidden}}'>开开心心</button>
+  <button class='menu' hidden='{{hidden}}'>万事如意</button>
+  <button class='menu' hidden='{{hidden}}'>心想事成</button>
+  <button class='menu' hidden='{{hidden}}'>阖家欢乐</button>
+  <button class='menu' hidden='{{hidden}}'>幸福安康</button>
+</view>
+<view class='shengming'>
+  <button class='menu_1' open-type='contact'>在线留言</button>
+  <button class='menu_2' bindtap='about'>关于这个小程序</button>
+</view>

@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/mine/mine",
+    "pages/first/first",
+    "pages/mine/about/about",
+    "pages/first/chapters/c2/c2",
+    "pages/first/chapters/c3/c3",
+    "pages/first/chapters/c4/c4",
+    "pages/first/chapters/c5/c5",
+    "pages/first/chapters/c6/c6",
+    "pages/first/chapters/c7/c7",
+    "pages/first/chapters/c8/c8",
+    "pages/first/chapters/c9/c9",
+    "pages/first/chapters/c10/c10",
+    "pages/first/chapters/c11/c11",
+    "pages/first/chapters/c12/c12",
+    "pages/first/chapters/c13/c13",
+    "pages/first/chapters/c14/c14",
+    "pages/first/chapters/c15/c15",
+    "pages/first/chapters/c16/c16",
+    "pages/first/chapters/c17/c17",
+    "pages/first/chapters/c18/c18",
+    "pages/first/chapters/c19/c19",
+    "pages/first/chapters/c20/c20",
+    "pages/talking/talking",
+    "pages/videos/videos"
+  ],
+  "window": {
+    "backgroundColor": "#58FAF4",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#81F7F3",
+    "navigationBarTitleText": "Python",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000000",
+    "backgroundColor": "#088A4B",
+    "selectedColor": "#F7FE2E",
+    "list": [
+      {
+        "pagePath": "pages/first/first",
+        "text": "基础知识",
+        "iconPath": "pages/first/images/first.png",
+        "selectedIconPath": "pages/first/images/first.png"
+      },
+      {
+        "pagePath": "pages/videos/videos",
+        "text": "视频学习",
+        "iconPath": "pages/videos/videos.jpg",
+        "selectedIconPath": "pages/videos/videos.jpg"
+      },
+      {
+        "pagePath": "pages/talking/talking",
+        "text": "畅所欲言",
+        "iconPath": "pages/talking/talking.png",
+        "selectedIconPath": "pages/talking/talking.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我",
+        "iconPath": "pages/mine/mine.png",
+        "selectedIconPath": "pages/mine/mine.png"
+      }
+    ]
+  }
+}

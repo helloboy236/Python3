@@ -1,0 +1,13 @@
+/* pages/mine/about/about.wxss */
+.btna{
+  background: #58FAAC;
+  margin-top: 30rpx;
+}
+.btn_msg{
+  background: #E6E6E6;
+  margin-top: 30rpx;
+}
+.btn_retmsg{
+  margin-top: 30rpx;
+  background: #F5DA81;
+}

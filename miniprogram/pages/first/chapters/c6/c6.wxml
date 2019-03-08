@@ -1,0 +1,68 @@
+<!--miniprogram/pages/first/chapters/c4/c4.wxml-->
+<view class='show'>
+<rich-text nodes='{{html1}}'></rich-text>
+<view class="table">
+<view class="tr">           
+<view class="th">运算符</view>           
+<view class="th">描述</view>           
+<view class="th">实例</view></view>  
+<view class="tr"> 
+<view class="td">算术运算符</view>           
+</view>                 
+<view class="tr">           
+<view class="td">+</view>           
+<view class="td">对象相加</view>           
+<view class="td">a+b输出19</view>
+</view>
+<view class="tr"> 
+<view class="td">-</view>           
+<view class="td">对象相减</view>           
+<view class="td">a-b输出1</view>
+</view>
+<view class="tr"> 
+<view class="td">*</view>           
+<view class="td">对象相乘</view>           
+<view class="td">a*b输出90</view>
+</view>
+<view class="tr"> 
+<view class="td">/</view>           
+<view class="td">对象相除</view>           
+<view class="td">a/b输出1.1</view>
+</view>
+<view class="tr"> 
+<view class="td">%</view>           
+<view class="td">对象求余</view>           
+<view class="td">a%b输出为1</view>
+</view>
+<view class="tr"> 
+<view class="td">**</view>           
+<view class="td">对象求幂</view>           
+<view class="td">a**b即a的b次方</view>
+</view>
+<view class="tr"> 
+<view class="td">比较运算符</view>           
+</view>
+<view class="tr"> 
+<view class="td">></view>           
+<view class="td">大于</view>           
+<view class="td">a>b输出True</view>
+</view>
+<view class="tr"> 
+<view class="td">{{xiaoyu}}</view>       
+<view class="td">小于</view>           
+<view class="td">{{xy}}</view>
+</view>
+<view class="tr"> 
+<view class="td">{{exam}}</view>           
+</view>
+
+
+</view>
+<view class='showFun'>
+  <text></text>
+</view>
+<text>
+
+</text>
+<button class='btnreturn' bindtap='returnMain'>返回主目录</button>
+</view>

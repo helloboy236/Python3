@@ -1,0 +1,68 @@
+/* miniprogram/pages/talking/talking.wxss */
+.v1{
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  font-size: 40rpx;
+}
+.v2{
+  height: 60vh;
+}
+.v3{
+  height: 20vh;
+}
+.cut_off_line{
+  background: red;
+  height: 3rpx;
+  width: 100%
+}
+.info{
+  width: 100vw;
+  height: 300rpx;
+  background: grey;
+}
+.title{
+  color: #40FF00;
+}
+.content{
+  color: #F4FA58;
+  height: 80vh;
+}
+
+.input_s{
+  color: #40FF00;
+  background: #FAFAFA;
+  width: 98vw;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.hover1{
+  background-color: #40FF00;
+}
+.movable_previous{
+  text-align: center;
+  height: 30px; 
+  width: 66px; 
+  background: #40FF00;
+}
+.movable_reveal{
+  text-align: center;
+  height: 30px; 
+  width: 140px; 
+  background: #FA5858;
+  font-size: 40rpx
+}
+.movable_next{
+  text-align: center;
+  height: 30px; 
+  width: 66px; 
+  background: #40FF00;
+  color: black
+}
+.movable_refresh{
+  text-align: center;
+  height: 30px; 
+  width: 80px; 
+  background: rgb(255, 81, 0);
+  color: blue;
+}
