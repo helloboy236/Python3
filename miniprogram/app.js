@@ -14,7 +14,8 @@ App({
     this.globalData = {
       userInfo:{},
       screen_height:0,
-      screen_width:0
+      screen_width:0,
+      image_privateVisits_hidden:false
     }
     
   }

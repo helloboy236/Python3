@@ -1,21 +1,21 @@
 <!--index.wxml-->
 <view class='share_xcxm_v'>
   <view>
-    <cover-image class='guard' bindtap='greeting' src='xcx_python.png' hidden='{{xcxm_hidden}}'></cover-image>
-    <text bindtap='bodyguard' style='margin-top:80rpx'>{{bodyguard1_name}}</text>
+    <cover-image class='guard' bindtap='guard1_picture_request' src='{{guard1_picture}}' hidden='{{xcxm_hidden}}'></cover-image>
+    <text bindtap='bodyguard' hidden='{{xcxm_hidden}}' style='margin-top:80rpx'>{{bodyguard1_name}}</text>
   </view>
   <view class="container">
     <view class="userinfo">
       <button class='login' wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 一键登录</button>
       <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfor.avatarUrl}}"></image>
-        <text class="userinfo-nickname">{{userInfor.nickName}}</text>
+        <image bindtap="user_picture_request" class="userinfo-avatar" src="{{user_picture}}"></image>
+        <text class="userinfo-nickname" bindtap='bodyguard'>{{appellation}}</text>
       </block>
     </view>
   </view>
   <view>
-    <cover-image bindtap='greeting' class='guard' src='xcx_python.png' hidden='{{xcxm_hidden}}'></cover-image>
-    <text bindtap='bodyguard'>{{bodyguard2_name}}</text>
+    <cover-image bindtap='guard2_picture_request' class='guard' src='{{guard2_picture}}' hidden='{{xcxm_hidden}}'></cover-image>
+    <text bindtap='bodyguard' hidden='{{xcxm_hidden}}'>{{bodyguard2_name}}</text>
   </view>
 </view>
 <view class='d_box' bindtap='share_facetoface' style='height:{{xcxm_h}}rpx;width:{{xcxm_w}}rpx;'>
@@ -24,8 +24,9 @@
 
 <view class='d_box2' hidden='{{give_name_hidden}}'>
   <form bindsubmit='give_name'>
-    <input type='text' class='name_color' maxlength='11' placeholder='请主公给我赐名' name='bodyguard_name1'></input>
-    <input class='name_color' placeholder='请主公给我赐名' maxlength='11' name='bodyguard_name2'></input>
+    <input type='text' class='name_color' maxlength='11' placeholder='请主上给我赐名' name='bodyguard_name1'></input>
+    <input class='name_color' placeholder='请主上给我赐名' maxlength='11' name='bodyguard_name2'></input>
+    <input class='name_color' placeholder='你希望我叫你什么' maxlength='11' name='appellation'></input>
     <button form-type='submit'>赐名</button>
   </form>
 </view>

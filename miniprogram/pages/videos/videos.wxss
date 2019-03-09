@@ -27,11 +27,22 @@
 
 .myflex{
   display: flex;
+  height: 50rpx;
 }
 .myflex_height{
-  height: 30rpx;
+  height: 50rpx;
+  width: 24vw;
 }
-
+.myflex_height1{
+  height: 30rpx;
+  color: blue;
+  font-size: 50rpx;
+  width:55vw
+}
 .send_danmu{
-  background: green;
+  background: rgb(120, 230, 120);
+  height: 80rpx;
+}
+.button_control{
+  background: rgb(101, 101, 216)
 }

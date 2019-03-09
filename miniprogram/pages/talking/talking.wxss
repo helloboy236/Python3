@@ -39,14 +39,6 @@
 .hover1{
   background-color: #40FF00;
 }
-.movable_previous{
-  text-align: center;
-  height: auto; 
-  width: auto; 
-}
-.movable_previous.button{
-  background: #40FF00;
-}
 .movable_reveal{
   text-align: center;
   justify-content: center;
@@ -62,24 +54,34 @@
   background: #F4FA58;
   border-radius: 100%;
 }
-.movable_next{
-  text-align: center;
-  height: auto; 
-  width: auto; 
-}
-.movable_next.button{
-  background: #40FF00;
-}
 .movable_refresh{
   text-align: center;
-  height: 66px; 
-  width: 66px; 
+  height: 72px; 
+  width: 200px; 
+  display: flex;
+  z-index: 0;
+  
 }
 .movable_refresh.button{
-  border-radius: 100%;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
   color: red;
   font-style: italic;
-  font-size: 40rpx;
+  font-size: 30rpx;
   border-width: 5rpx;
   background: gainsboro;
-}
+} 
+
+.movable_refresh.previous_button{
+  background: #40FF00;
+  font-size: 30rpx;
+  height: 60rpx;
+  width: 280rpx;
+} 
+.movable_refresh.next_button{
+  background: #40FF00;
+  font-size: 30rpx;
+  height: 60rpx;
+  width: 280rpx;
+} 

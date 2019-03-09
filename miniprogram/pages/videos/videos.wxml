@@ -3,7 +3,7 @@
   <movable-area class='movable_area'>
     <view class='video_title'>{{video_title}}</view>
     <video hidden='{{video_hidden}}' id='myVideo' class='video_view' src='{{video_src}}' title='{{video_title}}' danmu-list="{{danmu_list}}" enable-danmu danmu-btn controls bindplay='play_occur' bindpause='pause_occur' bindended='end_occur' binderror='video_error'
-      enable-play-gesture='ture' play-btn-position='center' bindwaiting='video_wating'></video>
+      enable-play-gesture='ture' play-btn-position='center' bindwaiting='video_wating' bindtimeupdate='video_time_update'></video>
     <movable-view direction='all' class='control_play' x='0' y='60'>
       <button plain='ture' bindtap='previous_chapter'>上一章</button>
     </movable-view>
@@ -12,8 +12,8 @@
     </movable-view>
     <view class="myflex">
       <view class='myflex_height'>弹幕内容:</view>
-      <input class='myflex_height' bindblur="bindInputBlur" type="text" placeholder="在此处输入弹幕内容" />
-      <button class='send_danmu' bindtap='send_danmu'>发送</button>
+      <input class='myflex_height1' value='{{danmu_content}}' confirm-type='send' bindconfirm='send_danmu' bindinput="bindInput" type="text" placeholder="在此处输入弹幕" />
+      <button class='send_danmu' bindtap='send_danmu' disabled='{{button_dend_disable}}'>发送</button>
     </view>
   </movable-area>
   <view>
@@ -21,6 +21,7 @@
     <view class='cutoff_line'></view>
     <text>声明：此视频仅供Python入门学者学习使用(视频来源于网络，如有侵权，请联系我删除，微信二维码附上，点击可放大)\n</text>
     <image style='width:{{i_w}}rpx;height:{{i_h}}rpx;' bindtap='image_show' src='https://612d-a-1-b4b138-1258455603.tcb.qcloud.la/image/wechat.png?sign=8a697da1b778ad6038a080b7f7376cb3&t=1551940691'></image>
+    <button class='button_control' bindtap='control_video'>{{control_video}}</button>
     <view class='cutoff_line'></view>
   </view>
   <view wx:for='{{video_titles}}' wx:for-index="idx" wx:for-item="itemName" style='background:grey;'>{{itemName}}</view>
