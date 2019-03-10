@@ -1,5 +1,5 @@
 <!--pages/first/first.wxml-->
-<image class='python' src="images/python.png"></image>
+<image class='python' src="cloud://a-1-b4b138.612d-a-1-b4b138/image/python.png"></image>
 
 <scroll-view class='f1'>
 <button class='btn_select' hover-class='btn_hover' bindtap='chapter1' disabled='{{disabled}}'>1、初识Python\r\n</button>

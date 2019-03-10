@@ -81,21 +81,6 @@ Page({
           hasUserInfo: true,
           hidden: false
         })
-      },
-      fail: function() {
-        wx.hideLoading()
-        wx.showModal({
-          title: '登录',
-          content: '登录后更精彩，去登录???',
-          showCancel: true,
-          cancelText: '先逛逛',
-          confirmText: '去登录',
-          success: function(res) {
-            if (res.confirm) {
-
-            } else {}
-          },
-        })
       }
     })
   },
@@ -122,56 +107,6 @@ Page({
                 [name]:picture_url
               }
             })
-        } else if(name=='guard1_picture') {
-          todos.add({
-            data: {
-              nickName: app.globalData.userInfo.nickName,
-              bodyguard1_name: that.data.bodyguard1_name,
-              bodyguard2_name: that.data.bodyguard2_name,
-              appellation: that.data.appellation,
-              lastTime: mydate.toLocaleTimeString(),
-              times: 1,
-              guard1_picture: picture_url,
-              guard2_picture: 'xcx_python.png',
-              user_picture: app.globalData.userInfo.avatarUrl,
-            },
-            success(res){
-              
-            },
-            fail(res){
-              
-            }
-          })
-        }else if(name=='guard2_picture'){
-          todos.add({
-            data: {
-              nickName: app.globalData.userInfo.nickName,
-              bodyguard1_name: that.data.bodyguard1_name,
-              bodyguard2_name: that.data.bodyguard2_name,
-              appellation: that.data.appellation,
-              lastTime: mydate.toLocaleTimeString(),
-              times: 1,
-              guard1_picture: 'xcx_python.png',
-              guard2_picture: picture_url,
-              user_picture: app.globalData.userInfo.avatarUrl,
-            }
-          })
-        }else if(name=='user_picture'){
-          todos.add({
-            data: {
-              nickName: app.globalData.userInfo.nickName,
-              bodyguard1_name: that.data.bodyguard1_name,
-              bodyguard2_name: that.data.bodyguard2_name,
-              appellation: that.data.appellation,
-              lastTime: mydate.toLocaleTimeString(),
-              times: 1,
-              guard1_picture: 'xcx_python.png',
-              guard2_picture: 'xcx_python.png',
-              user_picture: picture_url,
-            }
-          })
-        }else{
-          
         }
       },
     })
@@ -202,11 +137,6 @@ Page({
   test: function() {
     var that = this
     var cs = console.log
-    // wx.scanCode({
-    //   success(res){
-    //     console.log(res)
-    //   }
-    // })
   },
   share_facetoface: function() {
     var that = this
@@ -251,7 +181,7 @@ Page({
       title: '给' + that.data.appellation + '的提示',
       content: this.data.appellation + ',换个头像玩玩？？？可以换成gif动图哦',
       cancelText: '不换',
-      confirmText: '去用选一张',
+      confirmText: '去选一张',
       success: function(res) {
         if (res.confirm)
           that.upload_picture('guard2_picture')

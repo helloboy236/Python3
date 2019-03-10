@@ -39,6 +39,9 @@ Page({
    */
   onLoad: function(options) {
     var that = this
+    wx.showLoading({
+      title: '加载中',
+    })
     this.setData({
       image_hidden: app.globalData.image_privateVisits_hidden,
       talking_content_hidden: !app.globalData.image_privateVisits_hidden
@@ -49,7 +52,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    wx.hideLoading()
   },
 
   /**
