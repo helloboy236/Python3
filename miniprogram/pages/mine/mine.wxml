@@ -6,8 +6,7 @@
   </view>
   <view class="container">
     <view class="userinfo">
-      <button class='login' wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 一键登录</button>
-      <block wx:else>
+      <block>
         <image bindtap="user_picture_request" class="userinfo-avatar" src="{{user_picture}}"></image>
         <text class="userinfo-nickname" bindtap='bodyguard'>{{appellation}}</text>
       </block>

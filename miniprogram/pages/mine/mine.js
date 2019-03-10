@@ -41,17 +41,12 @@ Page({
       text: 'hello, world!'
     })
     var that = this;
-    wx.getSystemInfo({
-      success: function(res) {
-        app.globalData.screen_height = res['screenHeight']
-        app.globalData.screen_width = res['screenWidth']
-      },
-    })
     wx.getUserInfo({
       success: function(res) {
         app.globalData.userInfo = res.userInfo
         that.setData({
-          user_picture: app.globalData.userInfo.avatarUrl
+          user_picture: app.globalData.userInfo.avatarUrl,
+          appellation: app.globalData.userInfo.nickName
         })
         todos.where({
           nickName: app.globalData.userInfo.nickName
@@ -94,9 +89,7 @@ Page({
           content: '登录后更精彩，去登录???',
           showCancel: true,
           cancelText: '先逛逛',
-          cancelColor: 'red',
           confirmText: '去登录',
-          confirmColor: 'green',
           success: function(res) {
             if (res.confirm) {
 
@@ -116,62 +109,8 @@ Page({
 
     })
   },
-  getUserInfo: function(e) {
-    var that = this
-    wx.getSetting({
-      success(res) {
-        if (res.authSetting['scope.userInfo']) {
-          wx.showModal({
-            title: '登录成功',
-            content: '点击头像旁边的图片和文字，会有新的发现哦。',
-            showCancel: false,
-            confirmText: '朕知道了'
-          })
-          app.globalData.userInfo = e.detail.userInfo
-          that.setData({
-            appellation: e.detail.userInfo.nickName,
-            xcxm_hidden: false,
-            userInfor: e.detail.userInfo,
-            hasUserInfo: true,
-            hidden: false
-          })
-          todos.where({
-            nickName: e.detail.userInfo.nickName
-          }).get({
-            success(res) {
-              if (res.data.length == 0) {
-                todos.add({
-                  data: {
-                    nickName: e.detail.userInfo.nickName,
-                    bodyguard1_name: that.data.bodyguard1_name,
-                    bodyguard2_name: that.data.bodyguard2_name,
-                    appellation: that.data.appellation,
-                    lastTime: mydate.toLocaleTimeString(),
-                    times: 1,
-                    guard1_picture: 'xcx_python.png',
-                    guard2_picture: 'xcx_python.png',
-                    user_picture: app.globalData.userInfo.avatarUrl,
-                  }
-                })
-              } else {
-                var id = res.data[0]['_id']
-                todos.doc(id).update({
-                  data: {
-                    lastTime: mydate.toLocaleTimeString(),
-                  }
-                })
-              }
-            },
-          })
-        } else
-          wx.showToast({
-            title: '请先登录再使用',
-            icon: 'none'
-          })
-      }
-    })
-  },
   upload_data:function(name,picture_url){
+    var that=this
     todos.where({
       nickName: app.globalData.userInfo.nickName
     }).get({
@@ -195,6 +134,12 @@ Page({
               guard1_picture: picture_url,
               guard2_picture: 'xcx_python.png',
               user_picture: app.globalData.userInfo.avatarUrl,
+            },
+            success(res){
+              
+            },
+            fail(res){
+              
             }
           })
         }else if(name=='guard2_picture'){
@@ -226,7 +171,7 @@ Page({
             }
           })
         }else{
-          console.log('undefined')
+          
         }
       },
     })
@@ -249,7 +194,6 @@ Page({
             })
           },
           fail(res) {
-            console.log(res)
           }
         })
       }
@@ -258,6 +202,11 @@ Page({
   test: function() {
     var that = this
     var cs = console.log
+    // wx.scanCode({
+    //   success(res){
+    //     console.log(res)
+    //   }
+    // })
   },
   share_facetoface: function() {
     var that = this
@@ -286,9 +235,9 @@ Page({
   guard1_picture_request: function() {
     var that = this
     wx.showModal({
-      title: '给' + that.data.appellation + '提示',
-      content: this.data.appellation + '换个头像玩玩？？？',
-      cancelText: '这个不错',
+      title: '给' + that.data.appellation + '的提示',
+      content: this.data.appellation + '换个头像玩玩？？？可以换成gif动图哦',
+      cancelText: '不需要',
       confirmText: '去选一张',
       success: function(res) {
         if (res.confirm)
@@ -299,10 +248,10 @@ Page({
   guard2_picture_request: function() {
     var that = this
     wx.showModal({
-      title: '给' + that.data.appellation + '提示',
-      content: this.data.appellation + ',换个头像玩玩？？？',
-      cancelText: '这个挺好',
-      confirmText: '去选一张',
+      title: '给' + that.data.appellation + '的提示',
+      content: this.data.appellation + ',换个头像玩玩？？？可以换成gif动图哦',
+      cancelText: '不换',
+      confirmText: '去用选一张',
       success: function(res) {
         if (res.confirm)
           that.upload_picture('guard2_picture')
@@ -312,9 +261,9 @@ Page({
   user_picture_request: function() {
     var that = this
     wx.showModal({
-      title: '给' + that.data.appellation + '提示',
+      title: '给' + that.data.appellation + '的提示',
       content: this.data.appellation + ',换个头像玩玩？？？',
-      cancelText: '这个挺好',
+      cancelText: '不想换',
       confirmText: '去选一张',
       success: function(res) {
         if (res.confirm)
@@ -393,10 +342,16 @@ Page({
   },
   notes: function() {
     if (this.data.mark_show_notes == 0)
+    {
+     wx.showToast({
+       title: '点击可返回',
+       icon:'none'
+     })
       this.setData({
         mark_show_notes: 1,
         notes_hidden: false
       })
+    }
     else {
       this.setData({
         mark_show_notes: 0,

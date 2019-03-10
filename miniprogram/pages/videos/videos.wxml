@@ -24,5 +24,5 @@
     <button class='button_control' bindtap='control_video'>{{control_video}}</button>
     <view class='cutoff_line'></view>
   </view>
-  <view wx:for='{{video_titles}}' wx:for-index="idx" wx:for-item="itemName" style='background:grey;'>{{itemName}}</view>
+  <view wx:for='{{video_titles}}' wx:for-item="itemName" style='background:grey;'>{{itemName}}</view>
 </view>

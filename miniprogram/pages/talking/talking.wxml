@@ -1,9 +1,10 @@
 <!--miniprogram/pages/talking/talking.wxml-->
-<view class='v1' style='background:url("https://612d-a-1-b4b138-1258455603.tcb.qcloud.la/image/tree.jpg?sign=e35dc74537a43052142f8cf68734a681&t=1551791826")'>
-  <view  bindtap='hidden_image_微服私访' hidden='{{image_hidden}}'>
-  <text>点击图片可隐藏，直到下次打开此小程序</text>
+<view  bindtap='hidden_image_微服私访' hidden='{{image_hidden}}'>
+<view class='v4'></view>
+  <text >点击图片去浏览民意</text>
   <image style='width:100vw;' src="https://612d-a-1-b4b138-1258455603.tcb.qcloud.la/image/微服私访.jpg?sign=d9f38c9605133f78c5006cf7a93df6ce&t=1552102253"></image>
-  </view>
+</view>
+<view class='v1' style='background:url("https://612d-a-1-b4b138-1258455603.tcb.qcloud.la/image/tree.jpg?sign=e35dc74537a43052142f8cf68734a681&t=1551791826")' hidden='{{talking_content_hidden}}'>
   <view class='cut_off_line'></view>
   <movable-area style="height: 100vh; width: 100vw;">
     <label class='title'>{{title}}:</label>
@@ -17,11 +18,11 @@
       <button class='movable_reveal.button'>{{tip}}</button>
     </movable-view>
     <movable-view class='movable_refresh' direction='all' out-of-bounds='ture' inertia='ture' friction= '3' scale='true' animation='true' x="{{first_x}}" y="{{first_y}}">
-      <button class='movable_refresh.previous_button' hidden='{{movable_hidden}}' bindtap='previous_item'>上一条</button>
+      <button class='movable_refresh.previous_button' bindtap='previous_item'>上一条</button>
       <button class='movable_refresh.button' plain='true' bindtap='return_home'>首页</button>
-      <button class='movable_refresh.next_button' hidden='{{movable_hidden}}' bindtap='next_item'>下一条</button>
+      <button class='movable_refresh.next_button' bindtap='next_item'>下一条</button>
     </movable-view>
-    <movable-view class='info' direction="vertical" friction='2' x="{{input_x}}" y="{{input_y}}" hidden='{{s_hidden}}'>
+    <movable-view class='info' direction="vertical" friction='2' x="{{input_x}}" y="{{input_y}}" hidden='{{input_hidden}}'>
       <view style='height:50rpx;'>拖动此处上下移动圣旨</view>
       <form>
         <input value='{{nickname_input}}' confirm-type='done' bindinput='bi_name' placeholder='留下帝名或者标题(亦可不留)' placeholder-style='color:black;' maxlength='20' class='input_s'></input>

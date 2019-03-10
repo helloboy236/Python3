@@ -1,0 +1,9 @@
+/* miniprogram/pages/login/login.wxss */
+.view_up{
+  height: 40vh;
+  width: 100vw;
+}
+.login_image{
+  width: 100vw;
+  height: 30vh;
+}

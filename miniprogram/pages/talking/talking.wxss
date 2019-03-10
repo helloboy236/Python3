@@ -10,6 +10,9 @@
 .v3{
   height: 20vh;
 }
+.v4{
+  height: 20vh;
+}
 .cut_off_line{
   background: red;
   height: 3rpx;

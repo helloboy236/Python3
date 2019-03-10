@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/mine/mine",
     "pages/first/first",
     "pages/mine/about/about",
@@ -33,26 +34,26 @@
       {
         "pagePath": "pages/first/first",
         "text": "基础知识",
-        "iconPath": "pages/first/images/first.png",
-        "selectedIconPath": "pages/first/images/first.png"
+        "iconPath": "images/first.png",
+        "selectedIconPath": "images/first.png"
       },
       {
         "pagePath": "pages/videos/videos",
         "text": "视频学习",
-        "iconPath": "pages/videos/videos.jpg",
-        "selectedIconPath": "pages/videos/videos.jpg"
+        "iconPath": "images/videos.jpg",
+        "selectedIconPath": "images/videos.jpg"
       },
       {
         "pagePath": "pages/talking/talking",
         "text": "微服私访",
-        "iconPath": "pages/talking/talking.png",
-        "selectedIconPath": "pages/talking/talking.png"
+        "iconPath": "images/talking.png",
+        "selectedIconPath": "images/talking.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我",
-        "iconPath": "pages/mine/mine.png",
-        "selectedIconPath": "pages/mine/mine.png"
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine.png"
       }
     ]
   }

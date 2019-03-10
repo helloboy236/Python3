@@ -1,0 +1,6 @@
+<!--miniprogram/pages/login/login.wxml-->
+<view class='view_up'>
+<image class='view_up' src='welcome.jpg'></image>
+</view>
+<image class='login_image' src='login.png'></image>
+<button bindgetuserinfo='login_first' open-type='getUserInfo' type='primary'>一键登录</button>

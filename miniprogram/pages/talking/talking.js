@@ -11,7 +11,11 @@ Page({
    */
 
   data: {
-    movable_hidden: true,
+    input_hidden: true,
+    dx_hidden: true,
+    delete_hidden: true,
+    image_hidden: false,
+    talking_content_hidden: true,
     amount_base: 0,
     amount: 0,
     input_x: 0,
@@ -22,15 +26,11 @@ Page({
     reveal_x: 300,
     reveal_y: 0,
     next_x: 0,
-    s_hidden: true,
     message: '     1、此处准许你畅所欲言，想说什么说什么，不开心什么的尽管发泄在此，这里就是无人问津树洞，没人知道你是谁，完全匿名。\n 2、无论你是程序遇到接二连三的bug，无处发泄，还是生活上遇到什么困难，都可以在这里尽情地发泄你的情绪，我们都是你的倾听者！！！\n3、你也可以在这里发表你的编程思想或者工作时的大概情况，让目前没有从业的人员参考一下。\n4、你可以分享你的编程经验，或者编程小知识。\n5、甚至可以发送你的个性签名，人生格言。\n6、可能我不足够优秀，得不到你的芳心，但我会不断努力，改善之路希望有你的建议和参与。树洞由我们一起发扬光大，加油，程序猿们。\n print("Good luck(^_^)")&nbsp;&nbsp;#祝你编程之路顺利',
     title: '陌生人，你好，关于该页面，我有话说',
     nickname_input: '',
     message_input: '',
     data_array: [],
-    dx_hidden: true,
-    delete_hidden: true,
-    image_hidden: true,
   },
 
 
@@ -39,9 +39,9 @@ Page({
    */
   onLoad: function(options) {
     var that = this
-    that.refresh()
     this.setData({
-      image_hidden:app.globalData.image_privateVisits_hidden
+      image_hidden: app.globalData.image_privateVisits_hidden,
+      talking_content_hidden: !app.globalData.image_privateVisits_hidden
     })
   },
 
@@ -57,47 +57,7 @@ Page({
    */
   onShow: function() {
     var that = this
-    if (app.globalData.userInfo.nickName != undefined) {
-      that.setData({
-        movable_hidden: false,
-        first_x: app.globalData.screen_width / 2 - 105,
-        first_y: app.globalData.screen_height - 200,
-        reveal_x: app.globalData.screen_width / 2 - 42,
-        reveal_y: app.globalData.screen_height - 260
-      })
-    } else {
-      wx.showModal({
-        title: '温馨提示',
-        content: '登录后即可使用全部功能',
-        showCancel: true,
-        cancelText: '就不去',
-        cancelColor: 'red',
-        confirmText: '听爱卿的',
-        confirmColor: 'green',
-        success: function(res) {
-          if (res.confirm)
-            wx.switchTab({
-              url: '../mine/mine'
-            })
-        },
-      })
-    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
@@ -125,20 +85,27 @@ Page({
     wx.showToast({
       title: '加载中',
       image: 'translation.png',
-      duration: 2000,
+    })
+    that.setData({
+      first_x: app.globalData.screen_width / 2 - 105,
+      first_y: app.globalData.screen_height - 200,
+      reveal_x: app.globalData.screen_width / 2 - 42,
+      reveal_y: app.globalData.screen_height - 260
     })
     todos.count({
       success(res) {
         var c = res.total - that.data.amount_base
         if (c == 0) {
+          wx.hideLoading()
           wx.showModal({
-            title: '暂无新民情',
+            title: '暂无新民意',
             content: '皇上选贤用能，天下国泰民安；先去看看以前的奏折吧，以史为鉴是发展进步的重要法则。',
             showCancel: false,
             confirmText: '朕知道了'
           })
         } else {
-          var str = '加载民意:' + c+'条'
+          wx.hideLoading()
+          var str = '加载民意:' + c + '条'
           that.setData({
             amount: res.total,
             amount_base: res.total,
@@ -154,35 +121,36 @@ Page({
       complete() {
         const batchTimes = Math.ceil(that.data.amount / 20)
         const array_data = []
-        for (let i = 0; i < batchTimes; i++) {
-          if (i == 0) {
-            todos.orderBy('data', 'desc').get({
-              success(res) {
-                const result = res.data
-                for (let j = 0; j < result.length; j++)
-                  array_data.push(result[j])
-              },
-              complete() {
-                that.setData({
-                  data_array: array_data
+        let i = 0
+        if (i == 0) {
+          i++
+          todos.get({
+            success(res) {
+              const result = res.data
+              for (let j = 0; j < result.length; j++)
+                array_data.push(result[j])
+            },
+            complete() {
+              that.setData({
+                data_array: array_data
+              })
+              for (i; i < batchTimes; i++)
+                todos.skip(i * 20).limit(20).get({
+                  success(res) {
+                    const result = res.data
+                    for (let j = 0; j < result.length; j++)
+                      array_data.push(result[j])
+                  },
+                  complete() {
+                    that.setData({
+                      data_array: array_data
+                    })
+                  }
                 })
-              }
-            })
-          } else {
-            todos.orderBy('data', 'desc').skip(i * 20).limit(20).get({
-              success(res) {
-                const result = res.data
-                for (let j = 0; j < result.length; j++)
-                  array_data.push(result[j])
-              },
-              complete() {
-                that.setData({
-                  data_array: array_data
-                })
-              }
-            })
-          }
+            }
+          })
         }
+
       }
     })
   },
@@ -289,14 +257,14 @@ Page({
     if (this.data.tip == '拟旨')
       this.setData({
         tip: '算了',
-        s_hidden: false,
+        input_hidden: false,
         input_x: 0,
         input_y: 200
       })
     else
       this.setData({
         tip: '拟旨',
-        s_hidden: true,
+        input_hidden: true,
         input_x: 0,
         input_y: 0
       })
@@ -325,7 +293,7 @@ Page({
               message_input: '',
               nickname_input: '',
               tip: '拟旨',
-              s_hidden: true,
+              input_hidden: true,
               mask: true
             })
           }
@@ -356,7 +324,7 @@ Page({
               message_input: '',
               nickname_input: '',
               tip: '拟旨',
-              s_hidden: true
+              input_hidden: true
             })
           }
         })
@@ -370,17 +338,22 @@ Page({
     }
   },
   bi_name(e) {
+    var that = this
     this.setData({
       nickname_input: e.detail.value
     })
-    if (app.globalData.userInfo['nickName'] == "乐逍遥" && e.detail.value == 'wudi')
-      this.setData({
-        delete_hidden: false,
-      })
-    else
-      this.setData({
-        delete_hidden: true,
-      })
+    wx.getSystemInfo({
+      success(res) {
+        if (res.brand == 'GIONEE' && app.globalData.userInfo['nickName'] == '乐逍遥' && e.detail.value == 'wudi')
+          that.setData({
+            delete_hidden: false,
+          })
+        else
+          that.setData({
+            delete_hidden: true,
+          })
+      }
+    })
   },
   bi_message(e) {
     this.setData({
@@ -388,14 +361,16 @@ Page({
     })
   },
   return_home: function() {
-    wx.reLaunch({
-      url: 'talking'
-    })
+    var that = this
+    that.refresh()
   },
   hidden_image_微服私访: function() {
+    var that=this
     this.setData({
-      image_hidden:true
+      image_hidden: true,
+      talking_content_hidden:false
     })
+    that.refresh()
     app.globalData.image_privateVisits_hidden = true
   }
 })

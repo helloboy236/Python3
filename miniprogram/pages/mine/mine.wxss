@@ -46,12 +46,13 @@ display: flex;
 }
 .d_box3 {
 position:fixed;
-overflow: hidden;
 top: 20%;
+overflow: hidden;
 z-index: 1;
 background: rgb(223, 221, 143);
-width: 100vw;
 height: 600rpx;
+width: 100vw;
+margin-right: 30rpx;
 }
 
 .userinfo-nickname {
