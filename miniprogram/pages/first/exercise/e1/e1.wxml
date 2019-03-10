@@ -1,0 +1,3 @@
+<!--miniprogram/pages/first/exercise/e1/e1.wxml-->
+<exercise  problem="将一个列表的数据复制到另一个列表中。例如将a数组[0,1,2,3]复制到b数组" image="cloud://a-1-b4b138.612d-a-1-b4b138/code_image/e3.png"/>
+<button class='btnreturn' bindtap='returnMain'>返回主目录</button>

@@ -29,6 +29,7 @@ Page({
     user_picture: '',
     notes_html: '<table width="335m"><tr><th>更新历史</th></tr>' +
       '<tr><td width="80rpx">日期</td><td width="55rpx">版本号</td><td>更新内容</td></tr>' +
+      '<tr><td>2019/3/10</td><td>1.3.2</td><td>1、增加基础实战部分<br/>2、优化代码，提升体验</td></tr>' +
       '<tr><td>2019/3/9</td><td>1.3.1</td><td>1、增加部分娱乐功能，劳逸结合<br/>2、增加更换头像及昵称功能<br/>3、优化小程序（包括按键、弹幕系统等）</td></tr>' +
       '<tr><td>2019/3/7</td><td>1.3.0</td><td>增加视频学习功能</td></tr></table>'
   },
@@ -97,7 +98,7 @@ Page({
   upload_data:function(name,picture_url){
     var that=this
     todos.where({
-      nickName: app.globalData.userInfo.nickName
+      nickName: app.globalData.fuserInfo.nickName
     }).get({
       success(res) {
         if (res.data.length != 0) {
@@ -137,6 +138,12 @@ Page({
   test: function() {
     var that = this
     var cs = console.log
+    wx.showModal({
+      title: '提示',
+      content: '三个头像及昵称可以修改哦，去试试吧',
+      showCancel:false,
+      confirmText:'朕知道了'
+    })
   },
   share_facetoface: function() {
     var that = this

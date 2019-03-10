@@ -7,12 +7,12 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": true,
+		"autoAudits": false,
 		"uglifyFileName": false
 	},
 	"appid": "wxe85e61ceb3de408b",
 	"projectname": "basicPython",
-	"libVersion": "2.2.4",
+	"libVersion": "2.3.2",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 13,
+			"current": 16,
 			"list": [
 				{
 					"id": 0,
@@ -120,6 +120,27 @@
 					"id": -1,
 					"name": "login",
 					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "c10",
+					"pathName": "pages/first/chapters/c10/c10",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "e1",
+					"pathName": "pages/first/exercise/e1/e1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "e2",
+					"pathName": "pages/first/exercise/e2/e2",
 					"scene": null
 				}
 			]

@@ -1,0 +1,6 @@
+<!--pages/first/exercise/components/code/code.wxml-->
+
+
+<view class='showFun' hidden='{{hidden}}'>参考代码并非唯一:
+  <image class='view' src='{{image_show}}'></image>
+</view>

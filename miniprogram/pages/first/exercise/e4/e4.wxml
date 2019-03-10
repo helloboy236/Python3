@@ -1,0 +1,3 @@
+<!--miniprogram/pages/first/exercise/e4/e4.wxml-->
+<exercise  problem="使程序先暂停一秒然后继续下一条语句（输出一秒结束）" image="cloud://a-1-b4b138.612d-a-1-b4b138/code_image/e4.png"/>
+<button class='btnreturn' bindtap='returnMain'>返回主目录</button>

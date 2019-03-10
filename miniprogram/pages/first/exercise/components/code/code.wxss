@@ -1,0 +1,10 @@
+/* pages/first/exercise/components/code/code.wxss */
+.showFun{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  background: black;
+  color: #00FF00;
+}
+.view{
+  width: 100vw;
+}

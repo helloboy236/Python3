@@ -1,0 +1,4 @@
+<!--pages/first/exercise/components/problem/problem.wxml-->
+<view class='pro'>题目：
+<rich-text class='content'>{{problem_content}}</rich-text>
+</view>

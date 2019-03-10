@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "exercise": "/pages/first/exercise/components/exercise/exercise"
+  }
+}

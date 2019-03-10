@@ -1,0 +1,3 @@
+<!--miniprogram/pages/first/exercise/e2/e2.wxml-->
+<exercise  problem="有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？" image='cloud://a-1-b4b138.612d-a-1-b4b138/code_image/e1.png'/>
+<button class='btnreturn' bindtap='returnMain'>返回主目录</button>

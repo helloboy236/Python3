@@ -1,0 +1,5 @@
+<!--miniprogram/pages/first/exercise/e3/e3.wxml-->
+
+
+<exercise  problem="一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少？" image="cloud://a-1-b4b138.612d-a-1-b4b138/code_image/e2.png"/>
+<button class='btnreturn' bindtap='returnMain'>返回主目录</button>

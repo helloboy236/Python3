@@ -1,0 +1,4 @@
+<!--pages/first/exercise/components/input/input.wxml-->
+<view class='view'>输入你的代码：
+  <textarea class='input'></textarea>
+</view>

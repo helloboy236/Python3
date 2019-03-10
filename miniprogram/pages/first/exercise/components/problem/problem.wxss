@@ -1,0 +1,10 @@
+/* pages/first/exercise/components/problem/problem.wxss */
+.pro{
+  background: floralwhite;
+  font-size: 50rpx;
+  margin: 10rpx;
+}
+.content{
+  font-size: 30rpx;
+  color: blue;
+}

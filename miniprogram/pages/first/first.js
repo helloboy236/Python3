@@ -5,8 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    disabled:true,
-    studied:"#848484"
+    
   },
   /**
    * 生命周期函数--监听页面加载
@@ -32,27 +31,6 @@ Page({
       title: 'Python3',
     })
     var that = this
-      if(app.globalData.userInfo==undefined){
-        wx.showModal({
-          title: '温馨提示',
-          content: '登录后即可使用全部功能',
-          showCancel: true,
-          cancelText: '先逛逛',
-          cancelColor: 'red',
-          confirmText: '去登录',
-          confirmColor: 'green',
-          success: function (res) {
-            if (res.confirm)
-              wx.switchTab({
-                url: '../mine/mine'
-              })
-          },
-        })
-      }else{
-        that.setData({
-          disabled: false
-        })
-      }
   },
 
   /**
@@ -134,6 +112,36 @@ Page({
   chapter9: function () {
     wx.navigateTo({
       url: 'chapters/c9/c9',
+    })
+  },
+  chapter10: function () {
+    wx.navigateTo({
+      url: 'chapters/c10/c10',
+    })
+  },
+  exercise1:function(){
+    wx.navigateTo({
+      url: 'exercise/e1/e1',
+    })
+  },
+  exercise2: function () {
+    wx.navigateTo({
+      url: 'exercise/e2/e2',
+    })
+  },
+  exercise3: function () {
+    wx.navigateTo({
+      url: 'exercise/e3/e3',
+    })
+  },
+  exercise4: function () {
+    wx.navigateTo({
+      url: 'exercise/e4/e4',
+    })
+  },
+  exercise5: function () {
+    wx.navigateTo({
+      url: 'exercise/e5/e5',
     })
   },
 })

@@ -1,0 +1,10 @@
+/* pages/first/exercise/components/input/input.wxss */
+.input{
+  color: whitesmoke;
+}
+.view{
+  width: 100vw;
+  height: 40vh;
+  background: black;
+  color: rgb(168, 44, 44);
+}

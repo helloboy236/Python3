@@ -1,0 +1,5 @@
+<!--pages/first/exercise/components/exercise/exercise.wxml-->
+<problem problem_content="{{problem}}"/>
+<input1/>
+<button class='button' bindtap='open_reference_code' type='primary'>{{tip}}</button>
+<code  hidden='{{code_hidden}}' image_show="{{image}}"/>

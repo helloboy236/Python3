@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "code": "/pages/first/exercise/components/code/code",
+    "problem": "/pages/first/exercise/components/problem/problem",
+    "input1": "/pages/first/exercise/components/input/input"
+  }
+}

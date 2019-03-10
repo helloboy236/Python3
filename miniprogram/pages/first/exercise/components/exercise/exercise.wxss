@@ -1,0 +1,4 @@
+/* pages/first/exercise/components/exercise/exercise.wxss */
+.button{
+  margin: 10rpx;
+}

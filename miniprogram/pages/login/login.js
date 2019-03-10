@@ -63,8 +63,6 @@ Page({
       })
     } else {
       app.globalData.userInfo = res.detail.userInfo
-      cs(res)
-      cs(app.globalData.userInfo)
       wx.showLoading({
         title: '加载中',
       })
