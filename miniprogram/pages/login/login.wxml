@@ -2,5 +2,6 @@
 <view class='view_up'>
 <image class='view_up' src='welcome.jpg'></image>
 </view>
+<text>你给我信任，我还你知识</text>
 <image class='login_image' src='login.png'></image>
-<button bindgetuserinfo='login_first' open-type='getUserInfo' type='primary'>一键登录</button>
+<button bindgetuserinfo='login_first' open-type='getUserInfo' type='primary'>去允许</button>

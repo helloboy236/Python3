@@ -20,7 +20,6 @@ Page({
     xcxm_w: 0,
     xcxm_h: 0,
     userInfor: {},
-    hidden: true,
     bodyguard1_name: '保镖',
     bodyguard2_name: '侍卫',
     appellation: '主上',
@@ -36,6 +35,7 @@ Page({
   onLoad: function(options) {
     wx.showLoading({
       title: 'loading',
+      mask: true
     })
 
     wx.setTopBarText({
@@ -140,16 +140,16 @@ Page({
     var cs = console.log
     wx.showModal({
       title: '提示',
-      content: '三个头像及昵称可以修改哦，去试试吧',
+      content: '三个头像及昵称都可以修改，去试试吧',
       showCancel:false,
-      confirmText:'朕知道了'
+      confirmText:'我知道了'
     })
   },
   share_facetoface: function() {
     var that = this
     if (this.data.mark_show_share == 0) {
       wx.showToast({
-        title: that.data.appellation + '万岁',
+        title: '点击图片关闭',
         icon: 'none'
       })
       this.setData({
@@ -159,7 +159,7 @@ Page({
       })
     } else {
       wx.showToast({
-        title: that.data.appellation + '辛苦了',
+        title: '感谢分享',
         icon: 'none'
       })
       this.setData({
@@ -172,8 +172,8 @@ Page({
   guard1_picture_request: function() {
     var that = this
     wx.showModal({
-      title: '给' + that.data.appellation + '的提示',
-      content: this.data.appellation + '换个头像玩玩？？？可以换成gif动图哦',
+      title: '提示',
+      content: this.data.appellation + '换个头像?',
       cancelText: '不需要',
       confirmText: '去选一张',
       success: function(res) {
@@ -185,8 +185,8 @@ Page({
   guard2_picture_request: function() {
     var that = this
     wx.showModal({
-      title: '给' + that.data.appellation + '的提示',
-      content: this.data.appellation + ',换个头像玩玩？？？可以换成gif动图哦',
+      title: '提示',
+      content: this.data.appellation + ',换个头像玩?',
       cancelText: '不换',
       confirmText: '去选一张',
       success: function(res) {
@@ -198,7 +198,7 @@ Page({
   user_picture_request: function() {
     var that = this
     wx.showModal({
-      title: '给' + that.data.appellation + '的提示',
+      title: '提示',
       content: this.data.appellation + ',换个头像玩玩？？？',
       cancelText: '不想换',
       confirmText: '去选一张',
@@ -274,7 +274,7 @@ Page({
       },
     })
     wx.showToast({
-      title: '谢' + that.data.appellation + '赐名',
+      title: '修改成功',
     })
   },
   notes: function() {
@@ -299,6 +299,11 @@ Page({
   about: function() {
     wx.navigateTo({
       url: 'about/about'
+    })
+  },
+  translation:function(){
+    wx.navigateTo({
+      url: 'translation/translation',
     })
   }
 })

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bottom-button": "/pages/mine/translation/components/bottom-button/index",
+    "result-bubble": "/pages/mine/translation/components/result-bubble/index"
+  }
+}

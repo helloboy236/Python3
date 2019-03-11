@@ -19,20 +19,21 @@
     "pages/first/exercise/e2/e2",
     "pages/first/exercise/e3/e3",
     "pages/first/exercise/e4/e4",
-    "pages/first/exercise/e5/e5"
+    "pages/first/exercise/e5/e5",
+    "pages/mine/translation/translation"
   ],
   "window": {
     "backgroundColor": "#58FAF4",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#81F7F3",
-    "navigationBarTitleText": "Python",
+    "navigationBarBackgroundColor": "#E6E6E6",
+    "navigationBarTitleText": "Python3",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#000000",
-    "backgroundColor": "#088A4B",
-    "selectedColor": "#F7FE2E",
+    "backgroundColor": "#FFFFFF",
+    "selectedColor": "#848484",
     "list": [
       {
         "pagePath": "pages/first/first",
@@ -43,12 +44,12 @@
       {
         "pagePath": "pages/videos/videos",
         "text": "视频学习",
-        "iconPath": "images/videos.jpg",
-        "selectedIconPath": "images/videos.jpg"
+        "iconPath": "images/videos.png",
+        "selectedIconPath": "images/videos.png"
       },
       {
         "pagePath": "pages/talking/talking",
-        "text": "微服私访",
+        "text": "动态",
         "iconPath": "images/talking.png",
         "selectedIconPath": "images/talking.png"
       },
@@ -59,5 +60,11 @@
         "selectedIconPath": "images/mine.png"
       }
     ]
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.2.2",
+      "provider": "wx069ba97219f66d99"
+    }
   }
 }

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "modal": "/pages/mine/translation/components/modal/index",
+    "waiting-icon": "/pages/mine/translation/components/waiting-icon/index",
+    "play-icon": "/pages/mine/translation/components/play-icon/index"
+  }
+}

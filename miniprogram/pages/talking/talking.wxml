@@ -1,11 +1,6 @@
 <!--miniprogram/pages/talking/talking.wxml-->
-<view  bindtap='hidden_image_微服私访' hidden='{{image_hidden}}'>
-<view class='v4'></view>
-  <text >点击图片去浏览民意</text>
-  <image style='width:100vw;' src="cloud://a-1-b4b138.612d-a-1-b4b138/image/微服私访.jpg"></image>
-</view>
-<view class='v1' style='background:url("https://612d-a-1-b4b138-1258455603.tcb.qcloud.la/image/tree.jpg?sign=e35dc74537a43052142f8cf68734a681&t=1551791826")' hidden='{{talking_content_hidden}}'>
-  <view class='cut_off_line'></view>
+
+<view class='v1'>
   <movable-area style="height: 100vh; width: 100vw;">
     <label class='title'>{{title}}:</label>
     <scroll-view scroll-y>
@@ -14,8 +9,8 @@
       </view>
     </scroll-view>
     <movable-view class='movable_previous' hidden="{{delete_hidden}}" x="0" y="400" bindtap='delete_item'>删除</movable-view>
-    <movable-view class='movable_reveal' out-of-bounds='ture' inertia='ture' friction='5' x="{{reveal_x}}" y="{{reveal_y}}" direction="all" bindtap='send_one'>
-      <button class='movable_reveal.button'>{{tip}}</button>
+    <movable-view class='movable_reveal'x="{{reveal_x}}" y="{{reveal_y}}"bindtap='send_one' direction="{{direction}}">
+      <button class='movable_reveal.button' hidden='{{send_hidden}}'>发一条</button>
     </movable-view>
     <movable-view class='movable_refresh' direction='all' out-of-bounds='ture' inertia='ture' friction= '3' scale='true' animation='true' x="{{first_x}}" y="{{first_y}}">
       <button class='movable_refresh.previous_button' bindtap='previous_item'>上一条</button>
@@ -23,16 +18,15 @@
       <button class='movable_refresh.next_button' bindtap='next_item'>下一条</button>
     </movable-view>
     <movable-view class='info' direction="vertical" friction='2' x="{{input_x}}" y="{{input_y}}" hidden='{{input_hidden}}'>
-      <view style='height:50rpx;'>拖动此处上下移动圣旨</view>
+      <view style='height:80rpx;'>拖动此处上下移动</view>
       <form>
-        <input value='{{nickname_input}}' confirm-type='done' bindinput='bi_name' placeholder='留下帝名或者标题(亦可不留)' placeholder-style='color:black;' maxlength='20' class='input_s'></input>
+        <input value='{{nickname_input}}' confirm-type='done' bindinput='bi_name' placeholder='输入标题（不填则为匿名)' placeholder-style='color:#A4A4A4;' maxlength='20' class='input_s'></input>
         <view style='height:30rpx;'></view>
-        <textarea class='input_s' style="height:80rpx;" value='{{message_input}}' confirm-type='done' bindinput='bi_message' placeholder='键入圣旨内容(最多2000字)' maxlength='2000' placeholder-style='color:black;height:100rpx'></textarea>
-
-        <view style='height:30rpx;'></view>
-        <button hover-class='hover1' style='color:#FE9A2E;' bindtap='send'>盖章</button>
+        <textarea class='input_s' style="height:120rpx;" value='{{message_input}}' confirm-type='done' bindinput='bi_message' placeholder='键入内容(最多2000字)' maxlength='2000' placeholder-style='color:#A4A4A4;'></textarea>
+        <button hover-class='hover1' class='publish' bindtap='send'>发表</button>
+        <button hover-class='hover1' class='publish' bindtap='cancel'>取消</button>
       </form>
     </movable-view>
-    <view style='margin-top:100rpx;text-align:center;'>tip:你可以把按钮拖动到这里 </view>
+    <view style='margin-top:100rpx;text-align:center;color:#000000'>tip:你可以把按钮拖动到这里 </view>
   </movable-area>
 </view>

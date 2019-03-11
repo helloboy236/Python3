@@ -4,7 +4,8 @@
 <text>邮箱：jeady_wu@163.com</text>
 </text>
 <text>\r\n\r\n笔者——小五</text>
-<button class='btn_msg' open-type='contact'>在线留言</button>
+<button class='btn_msg' open-type='contact'>商业合作，点此并回复 0</button>
+<button  open-type='contact'>其他问题，点此在线留言</button>
 <button class='btn_retmsg' open-type='feedback'>意见反馈</button>
 <button class='btna' bindtap='returnmine'>返回</button>
 </view>

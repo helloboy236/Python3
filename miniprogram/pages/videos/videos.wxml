@@ -20,7 +20,7 @@
     <view style='height:50rpx;'></view>
     <view class='cutoff_line'></view>
     <text>声明：此视频仅供Python入门学者学习使用(视频来源于网络，如有侵权，请联系我删除，微信二维码附上，点击可放大)\n</text>
-    <image style='width:{{i_w}}rpx;height:{{i_h}}rpx;' bindtap='image_show' src='https://612d-a-1-b4b138-1258455603.tcb.qcloud.la/image/wechat.png?sign=8a697da1b778ad6038a080b7f7376cb3&t=1551940691'></image>
+    <image style='width:{{i_w}}rpx;height:{{i_h}}rpx;' bindtap='image_show' src='cloud://a-1-b4b138.612d-a-1-b4b138/image/wechat.png'></image>
     <button class='button_control' bindtap='control_video'>{{control_video}}</button>
     <view class='cutoff_line'></view>
   </view>

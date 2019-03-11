@@ -79,31 +79,16 @@ margin-right: 30rpx;
 .menu_view{
   width: inherit;
   margin-top: 50rpx;
-  background: rgba(7, 33, 56, 0.37);
   align-items: center;
 }
 
 .menu{
-  background-image: 'cloud://a-1-b4b138.612d-a-1-b4b138/image/21153275.jpg';
   margin-top: 5rpx;
   margin: 10rpx;
   height: 70rpx;
   font-size: 30rpx;
-  background-color: red;
-}
-.menu_1{
-  background: rgb(245, 163, 56);
-  height: 60rpx;
-  font-size: 28rpx;
-  margin-top:10rpx; 
-}
-.menu_2{
-  background: burlywood;
-  height: 50rpx;
-  font-size: 28rpx;
-  margin-top:10rpx; 
 }
 
-.shengming{
-  background: #58FA58;
+.splite{
+  height: 30rpx;
 }

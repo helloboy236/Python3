@@ -16,10 +16,7 @@ Page({
   },
   onLoad: function() {
     wx.setNavigationBarTitle({
-      title: '授权登录',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
+      title: '授权登录'
     })
     wx.getSystemInfo({
       success: function (res) {

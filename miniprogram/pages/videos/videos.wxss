@@ -40,9 +40,9 @@
   width:55vw
 }
 .send_danmu{
-  background: rgb(120, 230, 120);
+  background: #F2F2F2;
   height: 80rpx;
 }
 .button_control{
-  background: rgb(101, 101, 216)
+  background: #E6E6E6
 }

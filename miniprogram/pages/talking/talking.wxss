@@ -13,26 +13,22 @@
 .v4{
   height: 20vh;
 }
-.cut_off_line{
-  background: red;
-  height: 3rpx;
-  width: 100%
-}
+
 .info{
   width: 100vw;
-  height: 300rpx;
+  height: 50vh;
   background: grey;
 }
 .title{
-  color: #40FF00;
+  color: #848484;
 }
 .content{
-  color: #F4FA58;
+  color: #000000;
   height: 80vh;
 }
 
 .input_s{
-  color: #40FF00;
+  color: #000000;
   background: #FAFAFA;
   width: 98vw;
   margin-left: 10rpx;
@@ -40,22 +36,16 @@
 }
 
 .hover1{
-  background-color: #40FF00;
+  background-color: #BDBDBD;
 }
 .movable_reveal{
-  text-align: center;
-  justify-content: center;
-  justify-items: center;
-  text-justify: auto;
   height: 60px; 
-  width: 80px; 
-  font-size: 40rpx;
-  display: flex;
-  flex-direction: column;
+  width: 120px; 
 }
 .movable_reveal.button{
-  background: #F4FA58;
-  border-radius: 100%;
+  background: #BDBDBD;
+  border-radius: 40%;
+  font-size: 60rpx;
 }
 .movable_refresh{
   text-align: center;
@@ -69,22 +59,30 @@
   width: 160rpx;
   height: 160rpx;
   border-radius: 50%;
-  color: red;
+  color:#FFFFFF;
   font-style: italic;
   font-size: 30rpx;
   border-width: 5rpx;
-  background: gainsboro;
+  background: #000000;
 } 
 
 .movable_refresh.previous_button{
-  background: #40FF00;
+  background: #424242;
+  color:#FFFFFF;
   font-size: 30rpx;
   height: 60rpx;
   width: 280rpx;
 } 
 .movable_refresh.next_button{
-  background: #40FF00;
+  background: #424242;
+  color:#FFFFFF;
   font-size: 30rpx;
   height: 60rpx;
   width: 280rpx;
 } 
+
+.publish{
+  color:#424242;
+  margin: 10rpx;
+  border: 10rpx;
+}

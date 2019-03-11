@@ -6,6 +6,7 @@
 .btn_msg{
   background: #E6E6E6;
   margin-top: 30rpx;
+  margin-bottom: 40rpx;
 }
 .btn_retmsg{
   margin-top: 30rpx;

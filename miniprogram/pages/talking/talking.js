@@ -14,17 +14,17 @@ Page({
     input_hidden: true,
     dx_hidden: true,
     delete_hidden: true,
-    image_hidden: false,
     talking_content_hidden: true,
+    send_hidden:false,
+    direction:'all',
     amount_base: 0,
     amount: 0,
     input_x: 0,
     input_y: 0,
-    tip: '拟旨',
     first_x: 0,
     first_y: 0,
-    reveal_x: 300,
-    reveal_y: 0,
+    reveal_x:0,
+    reveal_y:0,
     next_x: 0,
     message: '     1、此处准许你畅所欲言，想说什么说什么，不开心什么的尽管发泄在此，这里就是无人问津树洞，没人知道你是谁，完全匿名。\n 2、无论你是程序遇到接二连三的bug，无处发泄，还是生活上遇到什么困难，都可以在这里尽情地发泄你的情绪，我们都是你的倾听者！！！\n3、你也可以在这里发表你的编程思想或者工作时的大概情况，让目前没有从业的人员参考一下。\n4、你可以分享你的编程经验，或者编程小知识。\n5、甚至可以发送你的个性签名，人生格言。\n6、可能我不足够优秀，得不到你的芳心，但我会不断努力，改善之路希望有你的建议和参与。树洞由我们一起发扬光大，加油，程序猿们。\n print("Good luck(^_^)")&nbsp;&nbsp;#祝你编程之路顺利',
     title: '陌生人，你好，关于该页面，我有话说',
@@ -39,13 +39,13 @@ Page({
    */
   onLoad: function(options) {
     var that = this
-    wx.showLoading({
-      title: '加载中',
+    wx.getSystemInfo({
+      success: function (res) {
+        app.globalData.screen_height = res['screenHeight']
+        app.globalData.screen_width = res['screenWidth']
+      },
     })
-    this.setData({
-      image_hidden: app.globalData.image_privateVisits_hidden,
-      talking_content_hidden: !app.globalData.image_privateVisits_hidden
-    })
+    that.refresh()
   },
 
   /**
@@ -70,12 +70,6 @@ Page({
     wx.stopPullDownRefresh()
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
 
   /**
    * 用户点击右上角分享
@@ -92,29 +86,38 @@ Page({
     that.setData({
       first_x: app.globalData.screen_width / 2 - 105,
       first_y: app.globalData.screen_height - 200,
-      reveal_x: app.globalData.screen_width / 2 - 42,
-      reveal_y: app.globalData.screen_height - 260
+      reveal_x: app.globalData.screen_width-60,
+      reveal_y: app.globalData.screen_height,
     })
     todos.count({
       success(res) {
         var c = res.total - that.data.amount_base
         if (c == 0) {
-          wx.hideLoading()
+          wx.hideToast()
           wx.showModal({
-            title: '暂无新民意',
-            content: '皇上选贤用能，天下国泰民安；先去看看以前的奏折吧，以史为鉴是发展进步的重要法则。',
-            showCancel: false,
-            confirmText: '朕知道了'
+            title: '暂无新动态',
+            content: '请你来发一条吧',
+            cancelText:'不想发',
+            confirmText: '好的',
+            success(res){
+              if(res.confirm){
+                that.setData({
+                  input_hidden: false,
+                  input_x: 0,
+                  input_y: 120
+                })
+              }
+            }
           })
         } else {
-          wx.hideLoading()
-          var str = '加载民意:' + c + '条'
+          wx.hideToast()
+          var str = '加载新动态:' + c + '条'
           that.setData({
             amount: res.total,
             amount_base: res.total,
           })
           wx.setNavigationBarTitle({
-            title: '听取民意(' + that.data.amount + '/' + that.data.amount_base + ')',
+            title: '动态(' + that.data.amount + '/' + that.data.amount_base + ')',
           })
           wx.showToast({
             title: str,
@@ -168,10 +171,10 @@ Page({
         amount: i - 1,
       })
       wx.setNavigationBarTitle({
-        title: '听取民意(' + j + '/' + i + ')',
+        title: '动态(' + j + '/' + i + ')',
       })
       wx.showToast({
-        title: '没有更多民意了',
+        title: '没有更多动态了',
         icon: 'none',
         duration: 2000,
       })
@@ -181,7 +184,7 @@ Page({
         message: data_res[j]['messages']
       })
       wx.setNavigationBarTitle({
-        title: '听取民意(' + j + '/' + i + ')',
+        title: '动态(' + j + '/' + i + ')',
       })
       wx.hideToast()
     }
@@ -197,10 +200,10 @@ Page({
         amount: 0,
       })
       wx.setNavigationBarTitle({
-        title: '听取民意(' + j + '/' + i + ')',
+        title: '动态(' + j + '/' + i + ')',
       })
       wx.showToast({
-        title: '没有更多民意了',
+        title: '没有更多动态了',
         icon: 'none',
         duration: 2000,
       })
@@ -211,7 +214,7 @@ Page({
         message: data_res[j]['messages']
       })
       wx.setNavigationBarTitle({
-        title: '听取民意(' + j + '/' + i + ')',
+        title: '动态(' + j + '/' + i + ')',
       })
       wx.hideToast()
     }
@@ -257,25 +260,17 @@ Page({
 
   },
   send_one: function() {
-    if (this.data.tip == '拟旨')
       this.setData({
-        tip: '算了',
         input_hidden: false,
         input_x: 0,
-        input_y: 200
-      })
-    else
-      this.setData({
-        tip: '拟旨',
-        input_hidden: true,
-        input_x: 0,
-        input_y: 0
+        input_y: 120,
+        send_hidden:true
       })
   },
   send: function() {
     var that = this
     if (this.data.nickname_input == '')
-      this.data.nickname_input = '匿名帝'
+      this.data.nickname_input = '匿名用户'
     if (app.globalData.userInfo.nickName != undefined) {
       console.log('unload')
       if (this.data.message_input != '') {
@@ -288,15 +283,19 @@ Page({
             messages: this.data.message_input
           },
           success(res) {
-            wx.showToast({
-              title: '下发圣旨成功',
-              duration: 2000
+            wx.showModal({
+              title: '发表成功',
+              content: '感谢您的参与！！！',
+              showCancel:false,
+              confirmText:'确定'
             })
             that.setData({
               message_input: '',
               nickname_input: '',
-              tip: '拟旨',
               input_hidden: true,
+              send_hidden: false,
+              input_x: 0,
+              input_y: 0,
               mask: true
             })
           }
@@ -319,26 +318,35 @@ Page({
           },
           success(res) {
             wx.showToast({
-              title: '下发圣旨成功',
+              title: '发表成功',
               duration: 2000,
               mask: true
             })
             that.setData({
               message_input: '',
               nickname_input: '',
-              tip: '拟旨',
-              input_hidden: true
+              input_x: 0,
+              input_y: 0,
+              input_hidden: true,
+              send_hidden: false
             })
           }
         })
       } else {
         wx.showToast({
           title: '先写点什么吧',
-          icon: 'none',
-          mask: true
+          icon: 'none'
         })
       }
     }
+  },
+  cancel:function(){
+    this.setData({
+      input_hidden: true,
+      send_hidden: false,
+      input_x: 0,
+      input_y: 0,
+    })
   },
   bi_name(e) {
     var that = this
@@ -366,14 +374,6 @@ Page({
   return_home: function() {
     var that = this
     that.refresh()
-  },
-  hidden_image_微服私访: function() {
-    var that=this
-    this.setData({
-      image_hidden: true,
-      talking_content_hidden:false
-    })
-    that.refresh()
-    app.globalData.image_privateVisits_hidden = true
   }
+
 })

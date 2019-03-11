@@ -1,4 +1,5 @@
 <!--index.wxml-->
+
 <view class='share_xcxm_v'>
   <view>
     <cover-image class='guard' bindtap='guard1_picture_request' src='{{guard1_picture}}' hidden='{{xcxm_hidden}}'></cover-image>
@@ -23,10 +24,10 @@
 
 <view class='d_box2' hidden='{{give_name_hidden}}'>
   <form bindsubmit='give_name'>
-    <input type='text' class='name_color' maxlength='11' placeholder='请主上给我赐名' name='bodyguard_name1'></input>
-    <input class='name_color' placeholder='请主上给我赐名' maxlength='11' name='bodyguard_name2'></input>
-    <input class='name_color' placeholder='你希望我叫你什么' maxlength='11' name='appellation'></input>
-    <button form-type='submit'>赐名</button>
+    <input type='text' class='name_color' maxlength='6' placeholder='保镖的名字' name='bodyguard_name1'></input>
+    <input class='name_color' placeholder='侍卫的名字' maxlength='6' name='bodyguard_name2'></input>
+    <input class='name_color' placeholder='修改我的昵称' maxlength='6' name='appellation'></input>
+    <button form-type='submit'>修改</button>
   </form>
 </view>
 
@@ -34,15 +35,12 @@
   <rich-text nodes="{{notes_html}}"></rich-text>
 </view>
 
-<view class='menu_view'>
-  <button class='menu' bindtap='test'>2019</button>
-  <button class='menu' hidden='{{hidden}}'>开开心心</button>
-  <button class='menu' hidden='{{hidden}}'>万事如意</button>
-  <button class='menu' hidden='{{hidden}}'>心想事成</button>
-</view>
 <view class='shengming'>
-  <button class='menu_1' bindtap='notes'>版本更新日志</button>
-  <button class='menu_2' bindtap='share_facetoface'>面对面分享</button>
-  <button class='menu_1' open-type='contact'>在线留言</button>
-  <button class='menu_2' bindtap='about'>关于这个小程序</button>
+  <button class='menu' plain='true' bindtap='test'>新功能提示</button>
+  <view class='splite'></view>
+  <button class='menu' plain='true' bindtap='translation'>中英口语在线翻译</button>
+  <view class='splite'></view>
+  <button class='menu' plain='true' bindtap='notes'>版本更新日志</button>
+  <button class='menu' plain='true' bindtap='share_facetoface'>面对面分享</button>
+  <button class='menu' plain='true' bindtap='about'>关于</button>
 </view>

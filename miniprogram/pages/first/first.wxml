@@ -1,5 +1,5 @@
 <!--pages/first/first.wxml-->
-<image class='python' src="cloud://a-1-b4b138.612d-a-1-b4b138/image/python.png"></image>
+<image class='python' src="python.png"></image>
 
 <text>基础知识学习</text>
 <scroll-view class='f1' scroll-y>
