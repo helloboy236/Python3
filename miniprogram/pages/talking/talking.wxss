@@ -25,6 +25,7 @@
 .content{
   color: #000000;
   height: 80vh;
+  font-size: 30rpx;
 }
 
 .input_s{

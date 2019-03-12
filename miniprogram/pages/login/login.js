@@ -27,9 +27,11 @@ Page({
     wx.getSetting({
       success(res) {
         if (res.authSetting['scope.userInfo'] == true)
+        {
           wx.reLaunch({
             url: '../mine/mine',
           })
+        }
       }
     })
   },
@@ -59,22 +61,8 @@ Page({
         }
       })
     } else {
-      app.globalData.userInfo = res.detail.userInfo
       wx.showLoading({
         title: '加载中',
-      })
-      todos.add({
-        data: {
-          nickName: app.globalData.userInfo.nickName,
-          bodyguard1_name: '保镖',
-          bodyguard2_name: '侍卫',
-          appellation: app.globalData.userInfo.nickName,
-          lastTime: mydate.toLocaleTimeString(),
-          times: 1,
-          guard1_picture: 'xcx_python.png',
-          guard2_picture: 'xcx_python.png',
-          user_picture: app.globalData.userInfo.avatarUrl,
-        }
       })
       wx.reLaunch({
         url: '../first/first'

@@ -1,45 +1,26 @@
 <!--index.wxml-->
 
 <view class='share_xcxm_v'>
-  <view>
-    <cover-image class='guard' bindtap='guard1_picture_request' src='{{guard1_picture}}' hidden='{{xcxm_hidden}}'></cover-image>
-    <text bindtap='bodyguard' hidden='{{xcxm_hidden}}' style='margin-top:80rpx'>{{bodyguard1_name}}</text>
-  </view>
   <view class="container">
     <view class="userinfo">
-      <block>
-        <image bindtap="user_picture_request" class="userinfo-avatar" src="{{user_picture}}"></image>
-        <text class="userinfo-nickname" bindtap='bodyguard'>{{appellation}}</text>
-      </block>
+        <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+        <open-data class="userinfo-nickname" type='userNickName'></open-data>
     </view>
-  </view>
-  <view>
-    <cover-image bindtap='guard2_picture_request' class='guard' src='{{guard2_picture}}' hidden='{{xcxm_hidden}}'></cover-image>
-    <text bindtap='bodyguard' hidden='{{xcxm_hidden}}'>{{bodyguard2_name}}</text>
   </view>
 </view>
 <view class='d_box' bindtap='share_facetoface' style='height:{{xcxm_h}}rpx;width:{{xcxm_w}}rpx;'>
   <image class='d_image' src='xcx_python.png'></image>
 </view>
-
-<view class='d_box2' hidden='{{give_name_hidden}}'>
-  <form bindsubmit='give_name'>
-    <input type='text' class='name_color' maxlength='6' placeholder='保镖的名字' name='bodyguard_name1'></input>
-    <input class='name_color' placeholder='侍卫的名字' maxlength='6' name='bodyguard_name2'></input>
-    <input class='name_color' placeholder='修改我的昵称' maxlength='6' name='appellation'></input>
-    <button form-type='submit'>修改</button>
-  </form>
-</view>
-
-<view class='d_box3' bindtap='notes' hidden='{{notes_hidden}}'>
-  <rich-text nodes="{{notes_html}}"></rich-text>
-</view>
+  <rich-text bindtap='notes' class='d_box3' nodes="{{notes_html}}"  hidden='{{notes_hidden}}'></rich-text>
 
 <view class='shengming'>
+  <view class='splite' />
+  <view class='splite' />
+  <view class='splite' />
   <button class='menu' plain='true' bindtap='test'>新功能提示</button>
-  <view class='splite'></view>
+  <view class='splite' />
   <button class='menu' plain='true' bindtap='translation'>中英口语在线翻译</button>
-  <view class='splite'></view>
+  <view class='splite' />
   <button class='menu' plain='true' bindtap='notes'>版本更新日志</button>
   <button class='menu' plain='true' bindtap='share_facetoface'>面对面分享</button>
   <button class='menu' plain='true' bindtap='about'>关于</button>
