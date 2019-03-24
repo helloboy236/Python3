@@ -18,16 +18,13 @@ Page({
     wx.setNavigationBarTitle({
       title: '授权登录'
     })
-    wx.getSystemInfo({
-      success: function (res) {
-        app.globalData.screen_height = res['screenHeight']
-        app.globalData.screen_width = res['screenWidth']
-      },
-    })
     wx.getSetting({
       success(res) {
         if (res.authSetting['scope.userInfo'] == true)
         {
+          wx.showLoading({
+            title: '登录中',
+          })
           wx.reLaunch({
             url: '../mine/mine',
           })

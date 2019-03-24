@@ -15,7 +15,9 @@ App({
       userInfo:{},
       screen_height:0,
       screen_width:0,
-      history: [],
+      integral:0,
+      id:'',
+      documents:[]
     } 
   }, 
   getRecordAuth: function () {

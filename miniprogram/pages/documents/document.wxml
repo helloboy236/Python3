@@ -1,0 +1,8 @@
+<!--miniprogram/pages/documents/document.wxml-->
+<button hidden='{{button_hidden}}' bindtap='cancel'>取消</button>
+<scroll-view class='reference' scroll-y>
+  <view class='reference2' wx:for='{{names}}' wx:for-index='index' wx:for-item='item'>
+    <button class='r1' id='{{index}}' bindtap='click' disabled='{{disabled[index]}}'>{{item}}</button>
+    <image class='r2' id='{{index}}' bindtap='unlock' src='{{image[index]}}'/>
+  </view>
+</scroll-view>

@@ -1,27 +1,40 @@
 /**index.wxss**/
-
+.c1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.share_xcxm_v {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  }
+.show_integral{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.gold{
+  width: 80rpx;
+  height: 80rpx;
 }
 
 .userinfo-avatar {
+  display: flex;
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
-  border-radius: 50%;
+  border-radius: 100%;
 }
-
-.guard {
-  width: 80rpx;
-  height: 80rpx;
-  margin-top: 60rpx;
+.sign{
+  margin-top: 30rpx;
 }
 
 .d_image {

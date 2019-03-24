@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 18,
 			"list": [
 				{
 					"id": 0,
@@ -148,6 +148,14 @@
 					"id": -1,
 					"name": "translation",
 					"pathName": "pages/mine/translation/translation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "document",
+					"pathName": "pages/documents/document",
+					"query": "",
 					"scene": null
 				}
 			]

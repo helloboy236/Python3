@@ -1,6 +1,5 @@
 <!--pages/first/first.wxml-->
 <image class='python' src="python.png"></image>
-
 <text>基础知识学习</text>
 <scroll-view class='f1' scroll-y>
   <button class='btn_select' hover-class='btn_hover' bindtap='chapter1'>1、初识Python</button>
@@ -11,10 +10,9 @@
   <button class='btn_select' hover-class='btn _hover' bindtap='chapter6'>6、Python 中的运算符</button>
   <button class='btn_select' hover-class='btn_hover' bindtap='chapter7'>7、Python 常用数据类型的处理</button>
   <button class='btn_select' hover-class='btn_hover' bindtap='chapter8'>8、if...elif...else条件控制</button>
-  <button class='btn_select' hover-class='btn_hover' bindtap='chapter9'>9、for，while循环语句</button><button class='btn_select' hover-class='btn_hover' bindtap='chapter10'>10、python中的函数定义def</button>
-  <button class='btn_fenge' bindtap='chapter10'>接下来你可以结合所学去下一阶段的实战题目练习</button>
+  <button class='btn_select' hover-class='btn_hover' bindtap='chapter9'>9、for，while循环语句</button>
+  <button class='btn_select' hover-class='btn_hover' bindtap='chapter10'>10、python中的函数定义def</button>
 </scroll-view>
-
 <text>基础实战题目练习</text>
 <scroll-view class='f2' scroll-y>
   <button class='btn_select2' hover-class='btn_hover2' bindtap='exercise1'>基础实战一</button>

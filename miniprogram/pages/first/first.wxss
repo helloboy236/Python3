@@ -10,12 +10,10 @@
 
 .f1{
   background: burlywood;
-  height: 30vh;
+  height: 36vh;
+  text-align: center;
 }  
-.f2{
-  background: rgb(111, 216, 137);
-  height: 33vh;
-}  
+
 .btn_select{
   margin-top: 5rpx;
   margin-bottom: 5rpx;
@@ -26,6 +24,22 @@
   align-items: flex-start;
   align-self: flex-start;
 }
+
+.btn_hover{
+  background: #F3F781
+}
+.btn_hover2{
+  background: rgb(172, 173, 133)
+}
+.btn_fenge{
+  font-size: 28rpx;
+}
+
+
+.f2{
+  background: rgb(111, 216, 137);
+  height: 33vh;
+}  
 .btn_select2{
   margin-top: 5rpx;
   margin-bottom: 5rpx;
@@ -35,13 +49,4 @@
   background: rgb(218, 240, 95);
   align-items: flex-start;
   align-self: flex-start;
-}
-.btn_hover{
-  background: #F3F781
-}
-.btn_hover2{
-  background: rgb(172, 173, 133)
-}
-.btn_fenge{
-  font-size: 28rpx;
 }

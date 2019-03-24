@@ -46,3 +46,26 @@
 .button_control{
   background: #E6E6E6
 }
+.v_select{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 30rpx;
+}
+.select1{
+  background: #81F7D8;
+  width: 50%;
+}
+.select11{
+  background: #81F7D8;
+  margin: 10rpx;
+}
+.select2{
+  background: #9F81F7;
+  width: 50%;
+}
+.select22{
+  background: #9F81F7;
+  margin: 10rpx;
+}
