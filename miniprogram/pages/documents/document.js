@@ -25,18 +25,18 @@ Page({
       true
     ],
     image: [
-      'lock_u.png',
-      'lock_c.png',
-      'lock_c.png',
-      'lock_c.png',
-      'lock_c.png',
-      'lock_c.png',
-      'lock_c.png',
-      'lock_c.png',
-      'lock_c.png',
-      'lock_c.png',
-      'lock_c.png',
-      'lock_c.png',
+      '/images/lock_u.png',
+      '/images/lock_c.png',
+      '/images/lock_c.png',
+      '/images/lock_c.png',
+      '/images/lock_c.png',
+      '/images/lock_c.png',
+      '/images/lock_c.png',
+      '/images/lock_c.png',
+      '/images/lock_c.png',
+      '/images/lock_c.png',
+      '/images/lock_c.png',
+      '/images/lock_c.png'
     ],
     urls: [
       'https://612d-a-1-b4b138-1258455603.tcb.qcloud.la/documents/Python100经典练习题.pdf',
@@ -93,7 +93,7 @@ Page({
     var doc = app.globalData.documents
     for (let i in doc) {
       var j = doc[i]
-      that.data.image[j] = 'lock_u.png'
+      that.data.image[j] = '/images/lock_u.png'
       that.data.disabled[j] = false
     }
     that.setData({
@@ -198,7 +198,7 @@ Page({
             documents: documents
           },
           success(res) {
-            that.data.image[id] = 'lock_u.png'
+            that.data.image[id] = '/images/lock_u.png'
             that.data.disabled[id] = false
             that.setData({
               image: that.data.image,
@@ -238,7 +238,7 @@ Page({
                 documents: documents
               },
               success(res) {
-                that.data.image[id] = 'lock_c.png'
+                that.data.image[id] = '/images/lock_c.png'
                 that.data.disabled[id] = true
                 that.setData({
                   image: that.data.image,

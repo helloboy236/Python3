@@ -10,10 +10,10 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
-      wx.setNavigationBarTitle({
-        title: 'Python3',
-      })
+  onLoad: function () {
+    wx.setNavigationBarTitle({
+      title: 'Python基础知识',
+    })
     },
 
     /**
@@ -27,10 +27,6 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-      wx.setNavigationBarTitle({
-        title: 'Python3',
-      })
-      var that = this
     },
 
     /**

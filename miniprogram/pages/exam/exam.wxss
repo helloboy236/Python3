@@ -1,0 +1,32 @@
+/* miniprogram/pages/exam/exam.wxss */
+.v1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: lavender;
+}
+
+.v2{
+  display: flex;
+  flex-direction: row;
+  width: 96vw;
+  height: 100vh;
+  background:#FFBF00;
+}
+
+.b1{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  width: 90vw;
+  background: #8181F7;
+  font-size: 30rpx;
+}
+.r2{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 30rpx;
+  margin-right: 60rpx;
+  margin-bottom: 30rpx;
+}

@@ -26,4 +26,10 @@ Page({
   returnmine:function(){
     wx.navigateBack({})
   },
+  copy:function(e){
+    console.log(e.target.id)
+    wx.setClipboardData({
+      data: e.target.id
+    })
+  }
 })

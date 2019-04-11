@@ -19,7 +19,9 @@
     "pages/first/exercise/e3/e3",
     "pages/first/exercise/e4/e4",
     "pages/first/exercise/e5/e5",
-    "pages/documents/document"
+    "pages/documents/document",
+    "pages/exam/exam",
+    "pages/exam/detail/detail"
   ],
   "window": {
     "backgroundColor": "#58FAF4",
@@ -32,31 +34,37 @@
   "tabBar": {
     "color": "#000000",
     "backgroundColor": "#FFFFFF",
-    "selectedColor": "#848484",
+    "selectedColor": "#9A2EFE",
     "list": [
       {
         "pagePath": "pages/first/first",
         "text": "基础与实战",
         "iconPath": "images/first.png",
-        "selectedIconPath": "images/first2.png"
+        "selectedIconPath": "images/first1.png"
       },
       {
         "pagePath": "pages/videos/videos",
         "text": "视频学习",
         "iconPath": "images/video.png",
-        "selectedIconPath": "images/video2.png"
-      },
-      {
-        "pagePath": "pages/documents/document",
-        "text": "相关文档",
-        "iconPath": "images/document.png",
-        "selectedIconPath": "images/document2.png"
+        "selectedIconPath": "images/video1.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我",
         "iconPath": "images/mine.png",
-        "selectedIconPath": "images/mine2.png"
+        "selectedIconPath": "images/mine1.png"
+      },
+      {
+        "pagePath": "pages/documents/document",
+        "text": "相关文档",
+        "iconPath": "images/document.png",
+        "selectedIconPath": "images/document1.png"
+      },
+      {
+        "pagePath": "pages/exam/exam",
+        "text": "二级题目",
+        "iconPath": "images/exam.png",
+        "selectedIconPath": "images/exam1.png"
       }
     ]
   },

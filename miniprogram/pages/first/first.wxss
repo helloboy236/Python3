@@ -10,7 +10,7 @@
 
 .f1{
   background: burlywood;
-  height: 36vh;
+  height: 50vh;
   text-align: center;
 }  
 
@@ -38,7 +38,7 @@
 
 .f2{
   background: rgb(111, 216, 137);
-  height: 33vh;
+  height: 34vh;
 }  
 .btn_select2{
   margin-top: 5rpx;

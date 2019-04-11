@@ -15,9 +15,10 @@ App({
       userInfo:{},
       screen_height:0,
       screen_width:0,
-      integral:0,
-      id:'',
-      documents:[]
+      integral:0,  //积分
+      id:'',    //积分id
+      documents:[],   //文档
+      exam_id:0      //第几套试卷
     } 
   }, 
   getRecordAuth: function () {

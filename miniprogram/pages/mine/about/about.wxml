@@ -1,11 +1,13 @@
 <view>
 <text>小程序声明：\n\n</text>
-<text>小程序主体为个人，所用素材部分来源于网络，如有侵权，请联系我；有什么问题、建议或补充请留言，同时欢迎合作者，实现双赢。\r\n
-<text>邮箱：jeady_wu@163.com</text>
-</text>
-<text>\r\n\r\n笔者——小五</text>
-<button class='btn_msg' open-type='contact'>商业合作，点此并回复 0</button>
-<button  open-type='contact'>其他问题，点此在线留言</button>
+<text>小程序主体为个人，所用素材部分来源于网络，如有侵权，请联系我；有什么问题、建议或补充请留言，同时欢迎合作者，编程爱好者，共同学习，实现双赢。\n\n微信公众号：</text>
+
+<text id='microCodeLife' bindlongtap='copy' bindtap='copy'>microCodeLife \n\n邮箱：</text>
+<text id='jeady_wu@163.com' bindlongtap='copy' bindtap='copy'>jeady_wu@163.com </text>
+
+<text id='wjd628' bindlongtap='copy' bindtap='copy'>\r\n\r\n小五(wjd628)(联系我请注明缘由)</text>
+<text>\n\n</text>
+<button type='primary' open-type='contact'>问题不急，点此在线留言</button>
 <button class='btn_retmsg' open-type='feedback'>意见反馈</button>
 <button class='btna' bindtap='returnmine'>返回</button>
 </view>

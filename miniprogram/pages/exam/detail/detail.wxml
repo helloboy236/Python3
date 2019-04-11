@@ -1,0 +1,44 @@
+<!--miniprogram/pages/exam/detail/detail.wxml-->
+<view hidden='{{finished}}' class='c1'>
+  <checkbox checked='{{checkbox}}' bindtap='shock'>错误震动</checkbox>
+  <view class='c2'>←左右滑动屏幕切换题目→</view>
+</view>
+<view hidden='{{finished}}' class='v00' bindtouchstart='touchstart' bindtouchend='touchend'>
+  <form bindsubmit='next1'> 
+    <view class='v0'>
+      <scroll-view scroll-y class='v01'>{{title}}</scroll-view>
+      <scroll-view class='v1' scroll-y>
+        <radio-group name='select' id='{{number}}' bindchange='selected'>
+          <radio checked='{{checkedA}}' class='r1' color='{{color}}' value='{{options[0]}}'>{{options[0]}}、{{contents[0]}}</radio>
+          <radio checked='{{checkedB}}' class='r1' color='{{color}}' value='{{options[1]}}'>{{options[1]}}、{{contents[1]}}</radio>
+          <radio checked='{{checkedC}}' class='r1' color='{{color}}' value='{{options[2]}}'>{{options[2]}}、{{contents[2]}}</radio>
+          <radio checked='{{checkedD}}' class='r1' color='{{color}}' value='{{options[3]}}'>{{options[3]}}、{{contents[3]}}</radio>
+        </radio-group>
+      </scroll-view>
+    </view>
+    <view class='v3'>
+      <view style='color:{{color}}' hidden='{{wrong}}'>很遗憾选错了，再选一个吧</view>
+      <view style='color:{{color}}' hidden='{{!right}}'>恭喜你答对了</view>
+    </view>
+    <view class='v2'></view>
+    <view class='b1'>
+      <button plain='true' bindtap='preview1'>上一题</button>
+      <button plain='true' form-type='submit'>下一题</button>
+    </view>
+  </form>
+</view>
+
+<view hidden='{{!finished}}' class='v11'>
+  <view class='v12'>
+    <image class='i1' src='gold.jpg'></image>
+    <text>+{{gold}}</text>
+    <view class='v13'></view>
+    <view class='v14'>同学你好：
+      <text decode='true'>\n&ensp;&ensp;&ensp;&ensp;恭喜你完成了本次考验，鉴于你的成绩优异，我方经商量，决定以资鼓励，以{{gold}}金牌作为奖励，望你不要放弃，继续努力，加油！！！</text>
+    </view>
+  </view>
+  <view class='v_error'>
+  <button bindtap='view_error' type='warn'>做错的题号</button>
+  <button bindtap='back' type='primary'>练习其他试题</button>
+  </view>
+</view>

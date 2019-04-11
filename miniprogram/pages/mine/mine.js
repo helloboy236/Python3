@@ -9,14 +9,16 @@ const todos = db.collection('integral')
 Page({
   data: {
     integral: 0,
-    notes_hidden: true,
+    notes_hidden:true,
     mark_show_share: 0,
     mark_show_notes: 0,
     xcxm_w: 0,
     xcxm_h: 0,
     notes_html: '<table width="335m"><tr><th>更新介绍</th></tr>' +
-      '<tr><td width="80rpx">日期</td><td width="55rpx">版本号</td><td>更新内容</td></tr>' +
-      '<tr><td>2019/3/17</td><td>1.4.2</td><td>增加签到系统</td></tr></table>',
+      '<tr><td width="80rpx">日期</td><td width="50rpx">更新内容</td></tr>' +
+      '<tr><td>2019/3/17</td><td>增加签到系统</td></tr>'+
+      '<tr><td>2019/4/10</td><td>增加python二级题目做题系统</td></tr>'+
+      '</table>',
     sign: '签到',
     nickname: '',
     continuous: 1,
@@ -229,7 +231,7 @@ Page({
     var that = this
     wx.showModal({
       title: '提示',
-      content: '新增签到得金牌系统，金牌用于解锁相关文档',
+      content: '新增二级模拟题系统，做每套题需要5枚金牌',
       showCancel: false,
       confirmText: '我知道了'
     })

@@ -70,9 +70,13 @@
   z-index: 1;
   background: #fafafa;
   height: 80vh;
-  margin: 10rpx;
 }
-
+.not{
+  display: block;
+  border-left: 1px #000;
+  border-right: 1px #000;
+  width: 60vw; 
+}
 .userinfo-nickname {
   color: #000;
 }

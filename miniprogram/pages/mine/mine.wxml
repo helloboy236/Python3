@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class='c1'>
   <view class="container">
-  <label hidden='{{lable_hidden}}'>+{{num}}</label>
+    <label hidden='{{lable_hidden}}'>+{{num}}</label>
     <view class='show_integral'>
       <image class='gold' src='gold.png'></image>
       <text>{{integral}}</text>
@@ -22,7 +22,8 @@
 <view class='d_box' bindtap='share_facetoface' style='height:{{xcxm_h}}rpx;width:{{xcxm_w}}rpx;'>
   <image class='d_image' src='xcx_python.png'></image>
 </view>
-<rich-text bindtap='notes' class='d_box3' nodes="{{notes_html}}" hidden='{{notes_hidden}}'></rich-text>
+<rich-text bindtap='notes' hidden='{{notes_hidden}}' class='d_box3' nodes="{{notes_html}}"></rich-text>
+
 
 <view class='shengming'>
   <view class='splite' />

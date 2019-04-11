@@ -1,0 +1,6 @@
+<!--miniprogram/pages/exam/exam.wxml-->
+<view class='v1'>
+  <view class='v2' wx:for='{{titles}}' wx:for-item='index'>
+    <button id='{{index}}' class='b1' bindtap='select'>{{titles[index]}}</button>
+  </view>
+</view>

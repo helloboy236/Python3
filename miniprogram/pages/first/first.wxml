@@ -1,5 +1,5 @@
 <!--pages/first/first.wxml-->
-<image class='python' src="python.png"></image>
+
 <text>基础知识学习</text>
 <scroll-view class='f1' scroll-y>
   <button class='btn_select' hover-class='btn_hover' bindtap='chapter1'>1、初识Python</button>
