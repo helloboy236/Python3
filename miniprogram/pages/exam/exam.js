@@ -16,75 +16,50 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     wx.setNavigationBarTitle({
       title: '计算机二级Python试题练习',
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onPullDownRefresh: function() {
+    wx.stopPullDownRefresh()
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-onPullDownRefresh:function(){
-  wx.stopPullDownRefresh()
-},
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function() {
+    return {
+      title: '这个小程序学Python挺不错，快来围观',
+      path: 'pages/login/login'
+    }
   },
-  select:function(e){
+  select: function(e) {
     app.globalData.exam_id = e.target.id
     var integral = app.globalData.integral
     wx.showModal({
       title: '测验',
-      content: '确定要花费5金牌去做这一套题吗?',
-      success(res){
-        if(res.confirm){
-          if(app.globalData.integral>=5){
+      content: '确定要花费3枚金牌去做这一套题吗?',
+      success(res) {
+        if (res.confirm) {
+          if (app.globalData.integral >= 3) {
             todos.doc(app.globalData.id).update({
               data: {
-                integral: db.command.inc(-5)
+                integral: db.command.inc(-3)
               },
               success(res) {
                 wx.showLoading({
                   title: '请等待',
-                })       
+                })
                 wx.navigateTo({
                   url: 'detail/detail',
                 })
                 wx.hideLoading()
               }
             })
-          }else{
+          } else {
             wx.showToast({
               title: '积分不足',
-              icon:'none'
+              icon: 'none'
             })
           }
         }

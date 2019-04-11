@@ -31,7 +31,7 @@
   <view class='splite' />
   <button class='menu' plain='true' bindtap='test'>新功能提示</button>
   <view class='splite' />
-  <button class='menu' plain='true' bindtap='open_tools'>常用工具</button>
+  <button class='menu' plain='true' bindtap='open_tools'>日常工具</button>
   <view class='splite' />
   <button class='menu' plain='true' bindtap='notes'>版本更新日志</button>
   <button class='menu' plain='true' bindtap='share_facetoface'>面对面分享</button>

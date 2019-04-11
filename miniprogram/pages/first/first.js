@@ -60,11 +60,12 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
-      wx.showShareMenu({
-
-      })
-    },
+  onShareAppMessage: function () {
+    return {
+      title: '这个小程序学Python挺不错，快来围观',
+      path: 'pages/login/login'
+    }
+  },
     chapter1: function() {
       wx.navigateTo({
         url: 'chapters/c1/c1',

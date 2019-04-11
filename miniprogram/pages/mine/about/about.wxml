@@ -1,13 +1,15 @@
 <view>
-<text>小程序声明：\n\n</text>
-<text>小程序主体为个人，所用素材部分来源于网络，如有侵权，请联系我；有什么问题、建议或补充请留言，同时欢迎合作者，编程爱好者，共同学习，实现双赢。\n\n微信公众号：</text>
 
-<text id='microCodeLife' bindlongtap='copy' bindtap='copy'>microCodeLife \n\n邮箱：</text>
-<text id='jeady_wu@163.com' bindlongtap='copy' bindtap='copy'>jeady_wu@163.com </text>
+  <scroll-view class='rt' scroll-y>
+    <rich-text decode='true' nodes='<p><h5><span>&emsp;&emsp;1、本小程序提供了学习Python基础的多种途径，包括电子书，视频及爬虫实战，还包括了计算机二级Python部分模拟题目。登录后即可享受这一切。<br/>&emsp;&emsp;2、小程序采用金牌学习系统，花费金牌可以解锁文档，以及做题目，金牌的获取目前有两种途径，一种是签到随机得金牌，而且连续签到所得金牌数有几率发生暴击，第二种获取方式等待您自己去探索。另外，为回馈忠实学习者，关注公众号回复"小程序金牌"+你的微信昵称，即可免费获取100金牌，前提是授权登录后，没有授权将导致金牌无法正常发放。<br/>&emsp;&emsp;3、安全问题：小程序只会获取你的微信公开信息，如微信昵称、头像，不会对您造成任何安全隐患，请放心使用。<br/>&emsp;&emsp;4、小程序主体为个人，所用素材部分来源于网络，如有侵权，请联系我；有什么问题、建议或补充请留言，同时欢迎合作者，编程爱好者，共同学习，共同进步，实现双赢。</th></p><hr/>'></rich-text>
+  </scroll-view>
 
-<text id='wjd628' bindlongtap='copy' bindtap='copy'>\r\n\r\n小五(wjd628)(联系我请注明缘由)</text>
-<text>\n\n</text>
-<button type='primary' open-type='contact'>问题不急，点此在线留言</button>
-<button class='btn_retmsg' open-type='feedback'>意见反馈</button>
-<button class='btna' bindtap='returnmine'>返回</button>
+  <text id='microCodeLife' bindlongtap='copy' bindtap='copy'>\n微信公众号：microCodeLife \n\n邮箱：</text>
+  <text id='jeady_wu@163.com' bindlongtap='copy' bindtap='copy'>jeady_wu@163.com </text>
+
+  <text id='wjd628' bindlongtap='copy' bindtap='copy'>\r\n\r\n小五(wjd628)(联系我请注明缘由)</text>
+  <text>\n\n</text>
+  <button type='primary' open-type='contact'>联系客服(请直入主题)</button>
+  <button class='btn_retmsg' open-type='feedback'>意见反馈</button>
+  <button class='btna' bindtap='returnmine'>返回</button>
 </view>

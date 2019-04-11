@@ -12,7 +12,13 @@
 .video_view{
   width: 100vw;
 }
-
+.bbb{
+  margin-top: 10rpx;
+}
+.ccc{
+  margin-top: 30rpx;
+  text-align: center;
+}
 .cutoff_line{
   height: 10rpx;
   width: 100vw;
@@ -26,22 +32,26 @@
 }
 
 .myflex{
+  margin-top: 20rpx;
   display: flex;
-  height: 50rpx;
+  flex-direction: row;
+  height: 30rpx;
+  justify-content: center;
+  align-items: center;
 }
 .myflex_height{
-  height: 50rpx;
   width: 24vw;
 }
 .myflex_height1{
   height: 30rpx;
   color: blue;
-  font-size: 50rpx;
   width:55vw
 }
 .send_danmu{
   background: #F2F2F2;
   height: 80rpx;
+  font-size: 30rpx;
+  
 }
 .button_control{
   background: #E6E6E6
@@ -51,7 +61,6 @@
   flex-direction: row;
   justify-content: center;
   width: 100vw;
-  margin-top: 30rpx;
 }
 .select1{
   background: #81F7D8;

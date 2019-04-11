@@ -1,9 +1,27 @@
 /* miniprogram/pages/login/login.wxss */
 .view_up{
-  height: 40vh;
+  height: 30vh;
   width: 100vw;
 }
-.login_image{
-  width: 100vw;
-  height: 30vh;
+.rt{
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  width: 98vw;
+  height: 40vh;
+}
+.button{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+  align-items: center;
+}
+.navigator{
+  margin-top: 20rpx;
+  color: thistle;
+  text-align: center;
+  width: 20vw;
+  border: 1px solid rgb(98, 105, 150);
+  border-radius: 25rpx;
+  font-size: 30rpx;
 }

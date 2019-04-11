@@ -12,7 +12,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    checked:false
   },
   onLoad: function() {
     wx.setNavigationBarTitle({
@@ -62,8 +62,16 @@ Page({
         title: '加载中',
       })
       wx.reLaunch({
-        url: '../first/first'
+        url: '../mine/mine'
       })
     }
+  },
+  temp:function(){
+    wx.reLaunch({
+      url: '../mine/mine',
+    })
+  },
+  agree:function(e){
+    this.data.checked = e.detail.value[0]
   }
 })

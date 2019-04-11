@@ -57,8 +57,11 @@ Page({
       url: 'mine',
     })
   },
-  onShareAppMessage: function() {
-    
+  onShareAppMessage: function () {
+    return{
+      title:'这个小程序学Python挺不错，快来围观',
+      path:'pages/login/login'
+    }
   },
   load_integral: function() {
     var that = this
@@ -231,7 +234,7 @@ Page({
     var that = this
     wx.showModal({
       title: '提示',
-      content: '新增二级模拟题系统，做每套题需要5枚金牌',
+      content: '新增二级模拟题系统，做每套题只需要3枚金牌',
       showCancel: false,
       confirmText: '我知道了'
     })

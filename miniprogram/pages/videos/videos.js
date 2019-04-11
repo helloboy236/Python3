@@ -66,9 +66,7 @@ Page({
       '爬喜马拉雅2',
       '爬喜马拉雅3',
       '爬英雄联盟皮肤',
-      '由于存储内存原因',
-      '需要更多爬虫视频的关注公众号',
-      'microcodelife'
+      '由于小程序存储空间有限，分享至此为止'
     ],
     exercise_srcs: [
 
@@ -101,13 +99,6 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function() {
@@ -115,21 +106,13 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-
-  /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
-
+  onShareAppMessage: function () {
+    return {
+      title: '这个小程序学Python挺不错，快来围观',
+      path: 'pages/login/login'
+    }
   },
   control_video: function() {
     if (this.data.control_video == '播放(快捷操作)')
@@ -348,8 +331,8 @@ Page({
           data: 'microcodelife',
           success(){
             wx.showModal({
-              title: '复制成功',
-              content: '公众号复制成功，返回微信查找公众号时粘贴即可',
+              title: '公众号复制成功',
+              content: '藏得这么隐秘都被你发现了，好有缘，去搜索公众号关注我吧',
               showCancel:false
             })
           }

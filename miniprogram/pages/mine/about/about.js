@@ -14,15 +14,6 @@ Page({
       title: '关于',
     })
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    wx.showShareMenu({
-      
-    })
-  },
   returnmine:function(){
     wx.navigateBack({})
   },
